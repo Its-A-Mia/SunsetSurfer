@@ -1,0 +1,43 @@
+.sidebarLeft {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: white;
+    border-right: 5px solid rgba(255, 255, 255, 0.05);
+}
+
+.timerAndCounter {
+    display: flex;
+    grid-row-start: 2;
+    align-self: center;
+    justify-content: center;
+}
+
+/* .timerAndCounter::before {
+    content: "";
+}
+
+.timerAndCounter::after {
+    
+} */
+
+.twitterAnchor {
+    
+    grid-row-start: 3;
+    align-self: end;
+}
+
+.twitterIcon {
+    background: #EDEDED;
+    border-radius: 50%;
+    height: 30px;
+    grid-row-start: 3;
+    align-self: end;
+    margin: 15px;
+    cursor: pointer;
+}

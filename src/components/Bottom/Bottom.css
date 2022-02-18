@@ -1,0 +1,10 @@
+.Bottom {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 10%;
+    position: relative;
+    top: 118px;
+    background: red;
+    border-top: 3px dashed #F5F5F5;
+}
+

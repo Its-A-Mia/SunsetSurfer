@@ -1,0 +1,19 @@
+.startermessage {
+    display: block;
+    position: relative;
+    max-height: 59px;
+    min-width: 150px;
+    max-width: 150px;
+    justify-items: center;
+    text-align: center;
+    font-family: 'Courier';
+    font-weight: bold;
+    font-size: smaller;
+    bottom: 25px;
+}
+
+.arrow {
+    height: 15px;
+    width: 13px;
+    padding-top: 2px;
+}

@@ -1,0 +1,32 @@
+.sidebarRight {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    height: 100%;
+    width: 210px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+}
+
+.linkContainer {
+    display: flex;
+    position: relative;
+    margin: 15px;
+    padding: 7px 10px;
+    grid-row-start: 3;
+    max-height: 15px;
+    align-self: end;
+    font-size: 11px;
+    background: #EDEDED;
+    border-radius: 15px;
+    font-family: 'Courier';
+    font-weight: bolder;
+    text-align: center;
+}
+
+.uselessWebAnchor {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}

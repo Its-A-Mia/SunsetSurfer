@@ -1,0 +1,7 @@
+.Top {
+    display: flex;
+    position: static;
+    height: 17vh;
+    /* background: red; */
+    border-bottom: 3px dashed #F5F5F5;
+}
