@@ -7,6 +7,8 @@ import './Checkboxes.css'
 
 const Checkboxes = () => {  
 
+//check boolean of checkbox, if true, pass in transformNew; if false, pass in disable
+
   return (
     <div className='container'> {/* container css file in Checkboxes.css */}
       <StarterMessage />
@@ -117,6 +119,7 @@ const Checkboxes = () => {
     </div>
   ) 
 }
+
 
 // styling objects: 1) Default before click 2) Movement after click 
 // Misclick, move back one box
