@@ -5,17 +5,12 @@ import '../Checkboxes/Checkboxes.js'
 
 
 const Checkbox = ( props ) => {
-  
-  //const [disabledFalse, setDisabledFalse] = useState
-  
-  // useEffect(() => {
-  //   function handleDisableBoolChange(disabledBoolValue) {
+  let listIdString = props.listId.toString()
+  // const cb = document.getElementsById(listIdString)
+  console.log(listIdString)
 
-  //   }
-
-  // })
   return (
-    <input className='checkbox' type='checkbox' disabled={props.disabledFalse} onClick={props.checkboxBool}/>        
+    <input className='checkbox' id={listIdString} type='checkbox' onClick={props.checkboxBool}/>        
   ) 
 }
 
