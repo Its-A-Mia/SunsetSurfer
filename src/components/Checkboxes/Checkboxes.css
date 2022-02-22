@@ -16,7 +16,7 @@
 .checkboxes {
     display: flex;
     position: relative;
-    inset: auto auto 38px 1030px;
+    inset: auto auto 38px 1020px;
 }
 
 @keyframes moveCheckbox {

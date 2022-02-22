@@ -1,23 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Checkbox.css'
+import '../Checkboxes/Checkboxes.js'
 
-const Checkbox = (props) => {
 
-    const [checkboxClickedBool, setCheckboxClickedBool] = useState(0);
 
-    const changeClickedBool = () => {
-        checkboxClickedBool == 0 ? 
-        setCheckboxClickedBool(1)
-        : setCheckboxClickedBool(0)
+const Checkbox = ( props ) => {
+  
+  //const [disabledFalse, setDisabledFalse] = useState
+  
+  // useEffect(() => {
+  //   function handleDisableBoolChange(disabledBoolValue) {
 
-        return checkboxClickedBool; 
-        }
+  //   }
 
-    console.log(checkboxClickedBool);
-
+  // })
   return (
-          <input className='checkbox' type='checkbox' onClick={changeClickedBool}/>
-  )      
+    <input className='checkbox' type='checkbox' disabled={props.disabledFalse} onClick={props.checkboxBool}/>        
+  ) 
 }
 
 export default Checkbox;
