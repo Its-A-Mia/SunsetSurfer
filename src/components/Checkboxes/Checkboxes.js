@@ -6,17 +6,18 @@ import './Checkboxes.css'
 //index all of the checkboxes, then go one by one, activating them
 
 const Checkboxes = (props) => {  
-    //indexes which key the checkbox array is on
+    //[STATE] index for which key the checkbox array is on
   let currentKey = 1;
   
-  function currentKeyModifier() {
-    
-  }
+    function currentKeyModifier(checkedBool) {
+    currentKey++;
+    console.log(currentKey)
+    }
   
       //array housing all checkboxes so that it's indexed
   const allCheckboxes =
-   [<Checkbox key={1}   listId={1}   currentKey={currentKey}/>, 
-    <Checkbox key={2}   listId={2}   currentKey={currentKey}/>,
+   [<Checkbox key={1}   listId={1}   currentKey={currentKey} currentKeyModifier={currentKeyModifier}/>, 
+    <Checkbox key={2}   listId={2}   currentKey={currentKey} currentKeyModifier={currentKeyModifier}/>,
     <Checkbox key={3}   listId={3}   currentKey={currentKey}/>,
     <Checkbox key={4}   listId={4}   currentKey={currentKey}/>,
     <Checkbox key={5}   listId={5}   currentKey={currentKey}/>,
