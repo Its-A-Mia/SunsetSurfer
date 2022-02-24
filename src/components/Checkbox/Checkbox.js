@@ -18,7 +18,7 @@ const Checkbox = ( props ) => {
       console.log(checkedBool)
 
       if (checkedBool == 0) {
-        props.currentKeyModifier()
+        props.onClickCheckbox()
       }
     }
     
@@ -30,7 +30,7 @@ const Checkbox = ( props ) => {
     id={props.listId}  
     type='checkbox' 
     disabled={props.listId > props.currentKey} 
-    onClick={changeCheckedBool}
+    onClick={() => changeCheckedBool}
     />     
   )
 }
