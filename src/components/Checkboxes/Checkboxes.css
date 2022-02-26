@@ -1,20 +1,19 @@
 .container {
-    display: grid;
-    position: relative;
-    overflow: hidden;
+    display: flex;
     height: 600px;
-    place-content: center;
-    place-items: center;
+    align-items: center;
+    padding-right: calc(60vw);
+    padding-left: 48%;
     border-top: 3px dashed #f5f5f5;
     border-bottom: 3px dashed #f5f5f5;
     transition: transform 100ms ease;
-    transform: translate('');
 }
 
 .checkboxes {
     display: flex;
     position: relative;
-    inset: auto auto 38px 990px;
+    left: 25px;
+    transition: transform 100ms ease;
 }
 
 @keyframes moveCheckbox {

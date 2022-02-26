@@ -2,13 +2,14 @@
     display: grid;
     grid-template-rows: auto auto auto;
     height: 100%;
-    width: 160px;
+    width: 180px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background: white;
-    border-right: 5px solid rgba(255, 255, 255, 0.05);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, 
+                                       rgba(255, 255, 255, 1) 80%, 
+                                       rgba(0, 0, 0, 0) 100% );
 }
 
 .timerAndCounter {

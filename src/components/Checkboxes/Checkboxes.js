@@ -6,7 +6,7 @@ import './Checkboxes.css'
 const Checkboxes = (props) => {  
       //array housing all checkboxes so that it's indexed
   const allCheckboxes =
-   [<Checkbox key={1}   listId={1}   currentKey={props.currentKey} onClickCheckbox={props.onClickCheckbox} moveCheckbox={props.moveCheckboxes()}/>, 
+   [<Checkbox key={1}   listId={1}   currentKey={props.currentKey} onClickCheckbox={props.onClickCheckbox} />, 
     <Checkbox key={2}   listId={2}   currentKey={props.currentKey} onClickCheckbox={props.onClickCheckbox} />,
     <Checkbox key={3}   listId={3}   currentKey={props.currentKey} onClickCheckbox={props.onClickCheckbox} />,
     <Checkbox key={4}   listId={4}   currentKey={props.currentKey} onClickCheckbox={props.onClickCheckbox} />,
@@ -107,13 +107,9 @@ const Checkboxes = (props) => {
     <Checkbox key={99}  listId={99}  currentKey={props.currentKey} onClickCheckbox={props.onClickCheckbox} />,
     <Checkbox key={100} listId={100} currentKey={props.currentKey} onClickCheckbox={props.onClickCheckbox} />
   ]
-
-  
   
   return (
     <div className='container' ref={props.containerRef}> {/* container css file in Checkboxes.css */}
-      <StarterMessage />
-      <br/>
     <ul className='checkboxes'>
       {allCheckboxes}
     </ul>

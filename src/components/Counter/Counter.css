@@ -1,0 +1,4 @@
+.counter {
+    position: absolute;
+    transform: translate(-25px, 20px)
+}
