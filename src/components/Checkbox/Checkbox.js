@@ -16,6 +16,11 @@ const Checkbox = ( props ) => {
     if (props.listId !== props.currentKey || props.listId === 1) return; {
       randomCheckboxMovement();
     }
+    if (props.gateValue === 0) {
+      props.setGateValue(0)
+      checkbox.style.transform = 'none';
+      console.log('checkbox reset?')
+    }
   })
 
   return (

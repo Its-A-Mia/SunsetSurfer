@@ -1,6 +1,10 @@
 .checkbox {
-    top: 85px;
+    /* top: 85px; */
     position: relative;
     height: 18px;
     transition: transform ease 100ms;
+}
+
+.checkboxAfter{
+    
 }
