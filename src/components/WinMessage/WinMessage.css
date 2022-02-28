@@ -1,0 +1,17 @@
+.winMessageContainer {
+    display:inline-block;
+    position: relative;
+    height: 125px;
+    width: 200px;
+    top: 35px;
+    left: 20px;
+    background: #EEEEEE;
+    text-align: center;
+    font-size: small;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.nice {
+    font-size: large;
+    font-weight: bold;  
+}

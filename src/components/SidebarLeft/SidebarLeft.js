@@ -8,23 +8,21 @@ const SidebarLeft = (props) => {
   return (
     <div className='sidebarLeft'>
       <p className='timerAndCounter'>
-          <Counter />
-          <Timer startTime={props.startTime} currentKey={props.currentKey}/>
+          <span className='lessThanSymbol'>&gt;</span>
+          <Counter
+            currentKey={props.currentKey}  
+          />
+          <Timer 
+            currentKey={props.currentKey}  
+            gateValue={props.gateValue}
+            setGateValue={props.setGateValue}
+          />
       </p>
-
       <a className='twitterAnchor' href='https://twitter.com/'> 
-      <img className='twitterIcon' src={twitterLogo} alt='Twitters logo' /> 
+        <img className='twitterIcon' src={twitterLogo} alt='Twitters logo' /> 
       </a>  
     </div>
   )
-} 
-
-function checkboxCounter () {
-
-}
-
-function timer () {
-
 }
 
 export default SidebarLeft

@@ -1,4 +1,6 @@
 .counter {
     position: absolute;
-    transform: translate(-25px, 20px)
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    transform: translate(-30px, 20px)
 }

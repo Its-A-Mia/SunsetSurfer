@@ -2,23 +2,25 @@ import React, { useState, useEffect } from 'react'
 import './Timer.css'
 
 const Timer = (props) => {
-  var milliseconds, seconds, minutes;
+  
   const [timer, setTimer] = useState(null)
 
   useEffect(() => {
-    if (props.currentKey === 2) {
-    const tick = setInterval(() => {
-      setTimer(timerLogic(Date.now() - props.startTime))
-    })
-  }
+      if (props.gateValue === 1) {
+            props.setGateValue(2) //sets gateValue to 2 to 
+            const startTime = Date.now();
+            const tick = setInterval(() => {
+              setTimer(timeLogic(Date.now() - startTime), 60 * 1000)
+              }) 
+            }      
   })
 
-  function timerLogic(duration) {
-    milliseconds = parseInt((duration % 1000) / 10)
+  function timeLogic(duration) {
+    var milliseconds = parseInt((duration % 1000) / 10)
     .toString()
     .padStart(2, "0")
-    seconds = Math.floor((duration / 1000) % 60)
-    minutes = Math.floor((duration / (1000 * 60)) % 60)
+    var seconds = Math.floor((duration / 1000) % 60)
+    var minutes = Math.floor((duration / (1000 * 60)) % 60)
     minutes = minutes < 10 ? "0" + minutes : minutes;
     seconds = seconds < 10 ? "0" + seconds : seconds;
     

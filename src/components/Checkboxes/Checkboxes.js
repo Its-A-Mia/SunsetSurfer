@@ -1,7 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState  } from 'react'
+
+import { faFlagCheckered } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 import StarterMessage from '../StarterMessage/StarterMessage'
 import Checkbox from '../Checkbox/Checkbox.js'
 import './Checkboxes.css'
+import WinMessage from '../WinMessage/WinMessage'
 
 const Checkboxes = (props) => {  
       //array housing all checkboxes so that it's indexed
@@ -112,14 +117,15 @@ const Checkboxes = (props) => {
     <div className='container' ref={props.containerRef}> {/* container css file in Checkboxes.css */}
     <ul className='checkboxes'>
       {allCheckboxes}
+      <FontAwesomeIcon icon={faFlagCheckered}/>
+      <WinMessage
+        gateValue={props.gateValue}
+        setGateValue={props.setGateValue}
+        resetGame={props.resetGame}
+      />
     </ul>
     </div>
   ) 
 }
-
-
-// styling objects: 1) Default before click 2) Movement after click 
-// Misclick, move back one box
-// Create animations here
 
 export default Checkboxes

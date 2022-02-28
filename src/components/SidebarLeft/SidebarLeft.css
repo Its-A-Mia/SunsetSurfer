@@ -2,7 +2,7 @@
     display: grid;
     grid-template-rows: auto auto auto;
     height: 100%;
-    width: 180px;
+    width: 200px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -13,22 +13,22 @@
 }
 
 .timerAndCounter {
-    display: flex;
+    display: none;
     grid-row-start: 2;
     align-self: center;
     justify-content: center;
 }
 
-/* .timerAndCounter::before {
-    content: "";
+.lessThanSymbol {
+    position: relative;
+    left: 35px;
+    top: 37px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: x-small;
 }
 
-.timerAndCounter::after {
-    
-} */
-
 .twitterAnchor {
-    
     grid-row-start: 3;
     align-self: end;
 }
