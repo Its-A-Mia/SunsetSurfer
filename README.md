@@ -1,1 +1,1 @@
-Recreation of https://checkboxrace.com/ using react
+Recreation of https://checkboxrace.com/ using React
