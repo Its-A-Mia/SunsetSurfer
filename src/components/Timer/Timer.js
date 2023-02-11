@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import './Timer.css';
 
-const Timer = ({ gateValue, setGateValue }) => {
+const Timer = ({ checkpoint, setcheckpoint }) => {
   const [timer, setTimer] = useState(null);
   const [isActive, setIsActive] = useState(false);
 
-  console.log(timer, gateValue);
-
   useEffect(() => {
-    if (gateValue === 1) {
+    if (checkpoint === 'gameStart') {
       setIsActive(true);
-      setGateValue(2);
+      setcheckpoint('gameInProgress');
     }
 
-    if (gateValue === 6) {
+    if (checkpoint === 'gameReset') {
       setIsActive(false);
     }
 
@@ -28,7 +26,7 @@ const Timer = ({ gateValue, setGateValue }) => {
     return () => {
       clearInterval(tick);
     };
-  }, [isActive, gateValue, setGateValue]);
+  }, [isActive, checkpoint, setcheckpoint]);
 
   function timeLogic(duration) {
     var milliseconds = parseInt((duration % 1000) / 10)

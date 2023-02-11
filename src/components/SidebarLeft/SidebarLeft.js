@@ -10,8 +10,8 @@ const SidebarLeft = (props) => {
       <p className="timerAndCounter">
         <span className="lessThanSymbol">&gt;</span>
         <Counter currentKey={props.currentKey} />
-        {props.gateValue !== 0 && (
-          <Timer currentKey={props.currentKey} gateValue={props.gateValue} setGateValue={props.setGateValue} />
+        {props.checkpoint !== 'startScreen' && (
+          <Timer currentKey={props.currentKey} checkpoint={props.checkpoint} setcheckpoint={props.setcheckpoint} />
         )}
       </p>
       <a className="twitterAnchor" href="https://twitter.com/">
