@@ -1,0 +1,11 @@
+.resetInGameContainer {
+    position: absolute;
+    left: 48%;
+    transform: translate(20px, 150px);
+}
+
+.reset {
+    padding: 0 2.5rem 0 2.5rem;
+    cursor: pointer;
+    z-index: 1;
+}

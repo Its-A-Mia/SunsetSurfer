@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Reset from '../Reset/Reset'
+import ResetWinMessage from '../Reset/ResetWinMessage'
 import './WinMessage.css'
 
 
@@ -43,7 +43,7 @@ const WinMessage = ( props ) => {
         <p className='timeReadout'>
             Your Time was <strong>{totalTime}</strong>
         </p>
-        <Reset 
+        <ResetWinMessage 
           resetGame={props.resetGame}
         />
     </div>

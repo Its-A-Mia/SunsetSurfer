@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react'
 import './Counter.css'
 
 const Counter = (props) => {
-  var localCount = props.currentKey
   const [counter, setCounter] = useState(null)
 
   useEffect (() => {
-    setCounter(counterLogic())
+    setCounter(() => counterLogic())
   })
   
   function counterLogic() {
