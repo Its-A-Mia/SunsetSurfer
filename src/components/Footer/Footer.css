@@ -27,12 +27,20 @@ footer {
 }
 
 #game-title {
-  --background-gradient: linear-gradient(135deg, rgba(221, 81, 126, 1) 0%, rgba(230, 142, 53, 1) 100%);
+  --background-gradient: linear-gradient(
+    135deg,
+    rgba(221, 81, 126, 1) 0%,
+    rgba(230, 142, 53, 1) 16.7%,
+    rgba(221, 81, 126, 1) 33%,
+    rgba(230, 142, 53, 1) 50%,
+    rgba(221, 81, 126, 1) 66%,
+    rgba(230, 142, 53, 1) 100%
+  );
   background-image: var(--background-gradient);
-  background-size: 240%;
+  background-size: 500%;
   -webkit-text-fill-color: transparent;
   transition: transform 200ms;
-  animation: textRipple 1.5s ease-in-out infinite alternate;
+  animation: textRipple 3s ease-in-out infinite alternate;
 }
 
 .footer-item-bg {
