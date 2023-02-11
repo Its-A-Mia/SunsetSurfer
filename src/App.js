@@ -1,13 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import Checkboxes from './components/Checkboxes/Checkboxes.js';
 import ResetInGame from './components/Reset/ResetInGame.js';
 import SidebarLeft from './components/SidebarLeft/SidebarLeft.js';
 import SidebarRight from './components/SidebarRight/SidebarRight.js';
 import StarterMessage from './components/StarterMessage/StarterMessage.js';
+import startGame from './lib/startGame.js';
+import resetGame from './lib/resetGame.js';
 
 function App() {
-  // checkpoints of the game define when certain things will happen in the correct order--checkpoints run in this sequence:
+  // checkpoints of the game define its sequence--checkpoints run in this sequence:
   // "startScreen", "gameStart", "gameInProgress", "gameFinish", "finishScreen", "gameReset"
+
+  // many props are passed down, context is best fit
+  const GameContext = createContext();
 
   //index for which key the checkbox array is on
   const [currentKey, setCurrentKey] = useState(1);
@@ -36,26 +41,16 @@ function App() {
     }
   }, [currentKey, checkpoint]);
 
-  //Removes starterMessage and shows count/timer in order to get the game started!
-  function startGame() {
-    const starterMessage = document.querySelector('.startermessage');
-    starterMessage.style.display = 'none';
-    const timerAndCounter = document.querySelector('.timerAndCounter');
-    timerAndCounter.style.display = 'flex';
-    // const resetBtnInGameContainer = document.querySelector('.resetButtonInGameContainer')
-    //   resetBtnInGameContainer = 'block';
-  }
-
   //Resets all indexes and messages
-  function resetGame(event) {
-    event.stopPropagation();
-    setCheckpoint('gameReset');
-    setCurrentKey(1);
-    const starterMessage = document.querySelector('.startermessage');
-    starterMessage.style.display = 'block';
-    const winMessage = document.querySelector('.winMessageContainer');
-    winMessage.style.display = 'none';
-  }
+  // function resetGame(event) {
+  //   event.stopPropagation();
+  //   setCheckpoint('gameReset');
+  //   setCurrentKey(1);
+  //   const starterMessage = document.querySelector('.startermessage');
+  //   starterMessage.style.display = 'block';
+  //   const winMessage = document.querySelector('.winMessageContainer');
+  //   winMessage.style.display = 'none';
+  // }
 
   //Called through onClick of checkbox component; stops event bubbling using event.stopPropagation()
   function onClickCheckbox(event) {
@@ -79,23 +74,25 @@ function App() {
   }
 
   return (
-    <div className="App" onClick={onClickApp}>
-      <button onClick={(e) => endGame(e)} style={{ position: 'fixed', inset: '0 auto auto 0', zIndex: '2' }}>
-        end game
-      </button>
-      <SidebarLeft currentKey={currentKey} checkpoint={checkpoint} setcheckpoint={setCheckpoint} />
-      <SidebarRight />
-      <StarterMessage />
-      <Checkboxes
-        currentKey={currentKey} //Not sure if all of these props need to be sent down, will have to do some cleaning up
-        setCurrentKey={setCurrentKey}
-        onClickCheckbox={onClickCheckbox}
-        checkpoint={checkpoint}
-        setcheckpoint={setCheckpoint}
-        resetGame={resetGame}
-      />
-      <ResetInGame resetGame={resetGame} />
-    </div>
+    <GameContext.Provider value={{ currentKey, setCurrentKey, checkpoint, setCheckpoint }}>
+      <div className="App" onClick={onClickApp}>
+        <button onClick={(e) => endGame(e)} style={{ position: 'fixed', inset: '0 auto auto 0', zIndex: '2' }}>
+          end game
+        </button>
+        <SidebarLeft currentKey={currentKey} checkpoint={checkpoint} setcheckpoint={setCheckpoint} />
+        <SidebarRight />
+        <StarterMessage />
+        <Checkboxes
+          currentKey={currentKey} //Not sure if all of these props need to be sent down, will have to do some cleaning up
+          setCurrentKey={setCurrentKey}
+          onClickCheckbox={onClickCheckbox}
+          checkpoint={checkpoint}
+          setcheckpoint={setCheckpoint}
+          resetGame={resetGame}
+        />
+        <ResetInGame resetGame={resetGame} />
+      </div>
+    </GameContext.Provider>
   );
 }
 
