@@ -3,13 +3,10 @@ footer {
   align-items: center;
   color: white;
   position: fixed;
-  height: 105px;
+  height: 150px;
   width: 100%;
-  border-top: solid #110256 1px;
   inset: auto auto 0 0;
   z-index: 2;
-  background: black;
-  box-shadow: 0 -30px 50px #7a98ed;
 }
 
 .footerContainer {
@@ -22,7 +19,7 @@ footer {
 }
 
 .footerSVG {
-  padding: 0 10px;
+  padding: 0 0.625em;
 }
 
 .footerSVGContainer {
@@ -38,7 +35,14 @@ footer {
   animation: textRipple 1.5s ease-in-out infinite alternate;
 }
 
-@media (max-width: 410px) {
+.footer-item-bg {
+  padding: 0 1em;
+  background-color: black;
+  border-radius: 50px;
+  border: solid #556cc9 3px;
+}
+
+@media (max-width: 1000px) {
   .footerContainer {
     margin: auto 20px;
   }

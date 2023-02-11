@@ -4,7 +4,6 @@ import Footer from './components/Footer/Footer.js';
 import ResetInGame from './components/Reset/ResetInGame.js';
 import SidebarLeft from './components/SidebarLeft/SidebarLeft.js';
 import StarterMessage from './components/StarterMessage/StarterMessage.js';
-import GridSVG from './components/svg/GridSVG.js';
 
 // many props are passed down, context is best fit
 export const GameContext = createContext();
@@ -71,8 +70,8 @@ function App() {
         <StarterMessage />
         <Checkboxes />
         <ResetInGame />
-        <div className="bg-grid">
-          <GridSVG />
+        <div className="bg-grid-container">
+          <div className="bg-grid" />
         </div>
       </GameContext.Provider>
     </div>

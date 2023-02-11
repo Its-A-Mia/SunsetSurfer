@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footerContainer">
-        <div>
+        <div className="footer-item-bg">
           <p>
             Recreation of
             <div className="checkboxLink">
@@ -15,9 +15,9 @@ const Footer = () => {
             </div>
           </p>
         </div>
-
-        <h1 id="game-title">Vaporbox Velocity</h1>
-
+        <span className="footer-item-bg">
+          <h1 id="game-title">Cyber Circuit</h1>
+        </span>
         <div>
           <a
             className="footerSVG"

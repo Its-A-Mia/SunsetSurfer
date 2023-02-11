@@ -2,7 +2,7 @@
   display: flex;
   height: 100vh;
   align-items: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 * {
@@ -44,6 +44,12 @@ a:hover {
   color: #68aeeb;
 }
 
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
 /* ===================
         App Classes
     =================== */
@@ -62,10 +68,11 @@ a:hover {
   width: 300%;
   box-shadow: 0 -10px 50px #7a98ed;
   background-size: 100px 100px;
-  transform: perspective(1000px) rotateX(40deg);
+  transform: rotateX(50deg) translateX(-10%);
+
   background-image: linear-gradient(to right, #556cc9 4px, transparent 1px),
     linear-gradient(to bottom, #556cc9 3px, transparent 1px);
-  animation: move-grid-bg 5s ease-in-out infinite alternate;
+  /* animation: move-grid-bg 5s ease-in-out infinite alternate; */
 }
 
 @keyframes move-grid-container {
