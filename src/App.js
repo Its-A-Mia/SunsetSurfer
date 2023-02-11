@@ -1,9 +1,10 @@
 import React, { createContext, useEffect, useState } from 'react';
 import Checkboxes from './components/Checkboxes/Checkboxes.js';
+import Footer from './components/Footer/Footer.js';
 import ResetInGame from './components/Reset/ResetInGame.js';
 import SidebarLeft from './components/SidebarLeft/SidebarLeft.js';
-import SidebarRight from './components/SidebarRight/SidebarRight.js';
 import StarterMessage from './components/StarterMessage/StarterMessage.js';
+import GridSVG from './components/svg/GridSVG.js';
 
 // many props are passed down, context is best fit
 export const GameContext = createContext();
@@ -66,10 +67,13 @@ function App() {
           end game
         </button>
         <SidebarLeft />
-        <SidebarRight />
+        <Footer />
         <StarterMessage />
         <Checkboxes />
         <ResetInGame />
+        <div className="bg-grid">
+          <GridSVG />
+        </div>
       </GameContext.Provider>
     </div>
   );

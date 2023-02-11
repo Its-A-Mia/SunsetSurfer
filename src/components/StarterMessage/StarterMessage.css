@@ -1,19 +1,27 @@
 .startermessage {
-    display: block;
-    position: absolute;
-    max-height: 59px;
-    min-width: 150px;
-    max-width: 150px;
-    text-align: center;
-    font-family: 'Courier';
-    font-weight: bold; 
-    font-size: smaller;
-    left: 48%;
-    transform: translateY(-55px);
+  position: absolute;
+  max-width: 150px;
+  text-align: center;
+  font-weight: 700;
+  font-family: cursive;
+  left: 47%;
+  transform: translateY(-55px);
+}
+
+@media (max-width: 810px) {
+  .startermessage {
+    left: 44%;
+  }
+}
+
+@media (max-width: 400px) {
+  .startermessage {
+    left: 32%;
+  }
 }
 
 .arrow {
-    height: 15px;
-    width: 13px;
-    padding-top: 2px;
+  height: 15px;
+  width: 13px;
+  padding-top: 2px;
 }

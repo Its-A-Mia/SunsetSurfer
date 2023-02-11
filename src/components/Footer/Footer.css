@@ -1,0 +1,59 @@
+footer {
+  display: flex;
+  align-items: center;
+  color: white;
+  position: fixed;
+  height: 105px;
+  width: 100%;
+  border-top: solid #110256 1px;
+  inset: auto auto 0 0;
+  z-index: 2;
+  background: black;
+  box-shadow: 0 -30px 50px #7a98ed;
+}
+
+.footerContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: auto 70px;
+}
+
+.footerSVG {
+  padding: 0 10px;
+}
+
+.footerSVGContainer {
+  display: flex;
+}
+
+#game-title {
+  --background-gradient: linear-gradient(135deg, rgba(221, 81, 126, 1) 0%, rgba(230, 142, 53, 1) 100%);
+  background-image: var(--background-gradient);
+  background-size: 240%;
+  -webkit-text-fill-color: transparent;
+  transition: transform 200ms;
+  animation: textRipple 1.5s ease-in-out infinite alternate;
+}
+
+@media (max-width: 410px) {
+  .footerContainer {
+    margin: auto 20px;
+  }
+}
+
+@keyframes textRipple {
+  0% {
+    background-position: left;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  100% {
+    background-position: right;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+}

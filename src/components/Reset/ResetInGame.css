@@ -1,11 +1,23 @@
 .resetInGameContainer {
-    position: absolute;
-    left: 48%;
-    transform: translate(20px, 150px);
+  position: absolute;
+  left: 47%;
+  transform: translate(20px, 150px);
+}
+
+@media (max-width: 810px) {
+  .resetInGameContainer {
+    left: 44%;
+  }
+}
+
+@media (max-width: 400px) {
+  .resetInGameContainer {
+    left: 32%;
+  }
 }
 
 .reset {
-    padding: 0 2.5rem 0 2.5rem;
-    cursor: pointer;
-    z-index: 1;
+  padding: 0 2.5rem 0 2.5rem;
+  cursor: pointer;
+  z-index: 1;
 }
