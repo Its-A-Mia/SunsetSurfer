@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { GameContext } from '../../App';
 import './Timer.css';
 
-const Timer = ({ checkpoint, setcheckpoint }) => {
+const Timer = () => {
+  const { checkpoint, setCheckpoint } = useContext(GameContext);
+
   const [timer, setTimer] = useState(null);
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
     if (checkpoint === 'gameStart') {
       setIsActive(true);
-      setcheckpoint('gameInProgress');
+      setCheckpoint('gameInProgress');
     }
 
     if (checkpoint === 'gameReset') {
@@ -26,7 +29,7 @@ const Timer = ({ checkpoint, setcheckpoint }) => {
     return () => {
       clearInterval(tick);
     };
-  }, [isActive, checkpoint, setcheckpoint]);
+  }, [isActive, checkpoint, setCheckpoint]);
 
   function timeLogic(duration) {
     var milliseconds = parseInt((duration % 1000) / 10)

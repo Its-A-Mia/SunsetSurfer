@@ -4,15 +4,13 @@ import ResetInGame from './components/Reset/ResetInGame.js';
 import SidebarLeft from './components/SidebarLeft/SidebarLeft.js';
 import SidebarRight from './components/SidebarRight/SidebarRight.js';
 import StarterMessage from './components/StarterMessage/StarterMessage.js';
-import startGame from './lib/startGame.js';
-import resetGame from './lib/resetGame.js';
+
+// many props are passed down, context is best fit
+export const GameContext = createContext();
 
 function App() {
   // checkpoints of the game define its sequence--checkpoints run in this sequence:
   // "startScreen", "gameStart", "gameInProgress", "gameFinish", "finishScreen", "gameReset"
-
-  // many props are passed down, context is best fit
-  const GameContext = createContext();
 
   //index for which key the checkbox array is on
   const [currentKey, setCurrentKey] = useState(1);
@@ -41,26 +39,14 @@ function App() {
     }
   }, [currentKey, checkpoint]);
 
-  //Resets all indexes and messages
-  // function resetGame(event) {
-  //   event.stopPropagation();
-  //   setCheckpoint('gameReset');
-  //   setCurrentKey(1);
-  //   const starterMessage = document.querySelector('.startermessage');
-  //   starterMessage.style.display = 'block';
-  //   const winMessage = document.querySelector('.winMessageContainer');
-  //   winMessage.style.display = 'none';
-  // }
-
   //Called through onClick of checkbox component; stops event bubbling using event.stopPropagation()
-  function onClickCheckbox(event) {
-    event.stopPropagation();
-    if (checkpoint === 'startScreen') {
-      setCheckpoint('gameStart'); //sets checkpoint to 1 allowing timer logic to run (next changecheckpoint() call in Timer.js)
-      startGame();
-    }
-    setCurrentKey(currentKey + 1);
-  }
+  const startGame = () => {
+    //Removes starterMessage and shows count/timer in order to get the game started!
+    const starterMessage = document.querySelector('.startermessage');
+    starterMessage.style.display = 'none';
+    const timerAndCounter = document.querySelector('.timerAndCounter');
+    timerAndCounter.style.display = 'flex';
+  };
 
   //Called through the App div to reset back one checkbox
   function onClickApp() {
@@ -74,25 +60,18 @@ function App() {
   }
 
   return (
-    <GameContext.Provider value={{ currentKey, setCurrentKey, checkpoint, setCheckpoint }}>
-      <div className="App" onClick={onClickApp}>
+    <div className="App" onClick={onClickApp}>
+      <GameContext.Provider value={{ currentKey, setCurrentKey, checkpoint, setCheckpoint, startGame }}>
         <button onClick={(e) => endGame(e)} style={{ position: 'fixed', inset: '0 auto auto 0', zIndex: '2' }}>
           end game
         </button>
-        <SidebarLeft currentKey={currentKey} checkpoint={checkpoint} setcheckpoint={setCheckpoint} />
+        <SidebarLeft />
         <SidebarRight />
         <StarterMessage />
-        <Checkboxes
-          currentKey={currentKey} //Not sure if all of these props need to be sent down, will have to do some cleaning up
-          setCurrentKey={setCurrentKey}
-          onClickCheckbox={onClickCheckbox}
-          checkpoint={checkpoint}
-          setcheckpoint={setCheckpoint}
-          resetGame={resetGame}
-        />
-        <ResetInGame resetGame={resetGame} />
-      </div>
-    </GameContext.Provider>
+        <Checkboxes />
+        <ResetInGame />
+      </GameContext.Provider>
+    </div>
   );
 }
 

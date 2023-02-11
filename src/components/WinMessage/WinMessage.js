@@ -1,31 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { GameContext } from '../../App';
 import ResetWinMessage from '../Reset/ResetWinMessage';
 import './WinMessage.css';
 
-const WinMessage = (props) => {
+const WinMessage = () => {
+  const { checkpoint, setCheckpoint } = useContext(GameContext);
+
   const [endTime, setEndTime] = useState(null);
   const [startTime, setStartTime] = useState(null);
   const [totalTime, setTotalTime] = useState(null);
 
-  console.log(startTime, endTime, totalTime, props.checkpoint);
-
   useEffect(() => {
-    if (props.checkpoint === 'startScreen') {
+    if (checkpoint === 'startScreen') {
       setStartTime(null);
       setEndTime(null);
       setTotalTime(null);
     }
-    if (props.checkpoint === 'gameStart') {
+    if (checkpoint === 'gameStart') {
       setStartTime(Date.now()); //captures the intitial time
     }
-    if (props.checkpoint === 'gameFinish') {
-      props.setcheckpoint('finishScreen'); //sets checkpoint to 4 to allow WinMessage component to execute final math after endTime updates
+    if (checkpoint === 'gameFinish') {
+      setCheckpoint('finishScreen'); //sets checkpoint to 4 to allow WinMessage component to execute final math after endTime updates
       setEndTime(Date.now()); //captures final time
     }
-    if (props.checkpoint === 'finishScreen' && !totalTime) {
+    if (checkpoint === 'finishScreen' && !totalTime) {
       setTotalTime(timeLogic(endTime - startTime));
     }
-  });
+  }, [startTime, endTime, totalTime, checkpoint, setCheckpoint]);
 
   function timeLogic(duration) {
     var milliseconds = parseInt((duration % 1000) / 10)
@@ -45,7 +46,7 @@ const WinMessage = (props) => {
       <p className="timeReadout">
         Your Time was <strong>{totalTime}</strong>
       </p>
-      <ResetWinMessage resetGame={props.resetGame} />
+      <ResetWinMessage />
     </div>
   );
 };

@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react'
-import './Counter.css'
+import React, { useState, useEffect, useContext } from 'react';
+import { GameContext } from '../../App';
+import './Counter.css';
 
-const Counter = (props) => {
-  const [counter, setCounter] = useState(null)
+const Counter = () => {
+  // eslint-disable-next-line no-undef
+  const { currentKey } = useContext(GameContext);
 
-  useEffect (() => {
-    setCounter(() => counterLogic())
-  })
-  
-  function counterLogic() {
-    if (props.currentKey < 11) {
-      return `00${props.currentKey - 1}/100`
-    } else if (props.currentKey < 101) {
-      return `0${props.currentKey - 1}/100`
-    } else {return `${props.currentKey - 1}/100`}  
-  }
+  const [counter, setCounter] = useState(null);
 
-  return (
-    <span className='counter'>{counter}</span>
-  )
-}
+  useEffect(() => {
+    function counterLogic() {
+      if (currentKey < 11) return `00${currentKey - 1}/100`;
+      if (currentKey < 101) return `0${currentKey - 1}/100`;
+      return `${currentKey - 1}/100`;
+    }
 
-export default Counter
+    setCounter(() => counterLogic());
+  }, [currentKey]);
+
+  return <span className="counter">{counter}</span>;
+};
+
+export default Counter;
