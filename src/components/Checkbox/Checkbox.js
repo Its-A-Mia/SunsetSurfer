@@ -35,14 +35,17 @@ const Checkbox = (props) => {
   });
 
   return (
-    <input
-      className="checkbox"
-      id={props.listId}
-      type="checkbox"
-      disabled={props.listId > currentKey || currentKey === 101}
-      checked={props.listId < currentKey || currentKey === 101}
-      onClick={props.listId === currentKey ? (e) => onClickCheckbox(e) : undefined}
-    />
+    <div className="checkbox-container">
+      <input
+        className="checkbox"
+        id={props.listId}
+        type="checkbox"
+        disabled={props.listId > currentKey || currentKey === 101}
+        checked={props.listId < currentKey || currentKey === 101}
+        onClick={props.listId === currentKey ? (e) => onClickCheckbox(e) : undefined}
+      />
+      <span className="checkmark"></span>
+    </div>
   );
 };
 
