@@ -7,10 +7,13 @@
 
 * {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
 }
 
 body {
   margin: 0;
+  overflow: hidden;
+  background: black;
 }
 
 /* ===================
@@ -19,7 +22,6 @@ body {
 
 h1 {
   margin: 0;
-  /* font-family: 'Fredoka One', cursive; */
   font-family: 'Permanent Marker', cursive;
   font-size: 4.5rem;
   font-variant: small-caps;
@@ -46,11 +48,40 @@ a:hover {
         App Classes
     =================== */
 
-.bg-grid {
-  position: absolute;
+.bg-grid-container {
   z-index: -1;
-  bottom: 0;
-  height: 35%;
+  position: absolute;
   width: 100%;
-  border: solid red 2px;
+  height: 100%;
+  perspective: 50em;
+  /* animation: move-grid-container 10s infinite alternate; */
+}
+
+.bg-grid {
+  height: 100%;
+  width: 300%;
+  box-shadow: 0 -10px 50px #7a98ed;
+  background-size: 100px 100px;
+  transform: perspective(1000px) rotateX(40deg);
+  background-image: linear-gradient(to right, #556cc9 4px, transparent 1px),
+    linear-gradient(to bottom, #556cc9 3px, transparent 1px);
+  animation: move-grid-bg 5s ease-in-out infinite alternate;
+}
+
+@keyframes move-grid-container {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes move-grid-bg {
+  0% {
+    transform: rotateX(50deg) translateX(-10%);
+  }
+  100% {
+    transform: rotateX(50deg) translateX(-30%);
+  }
 }
