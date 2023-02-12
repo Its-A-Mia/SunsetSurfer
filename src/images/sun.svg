@@ -1,14 +1,12 @@
 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clipPath="url(#clip0_1_2)">
-<circle cx="25" cy="25" r="25" fill="url(#paint0_linear_1_2)"/>
-</g>
+<circle cx="25" cy="25" r="25" fill="url(#paint0_linear_1_3)"/>
 <defs>
-<linearGradient id="paint0_linear_1_2" x1="25" y1="0" x2="25" y2="50" gradientUnits="userSpaceOnUse">
-<stop offset="0.333333" stop-color="#E68E35"/>
-<stop offset="1" stop-color="#DD517E"/>
+<linearGradient id="paint0_linear_1_3" x1="25" y1="0" x2="25" y2="50" gradientUnits="userSpaceOnUse">
+<stop stopColor="#E68E35"/>
+<stop offset="0.192708" stopColor="#E06566"/>
+<stop offset="0.509164" stopColor="#DD517E"/>
+<stop offset="0.760417" stopColor="#E06665" stop-opacity="0.64"/>
+<stop offset="1" stopColor="#E68E35" stop-opacity="0.12"/>
 </linearGradient>
-<clipPath id="clip0_1_2">
-<rect width="50" height="50" fill="white"/>
-</clipPath>
 </defs>
 </svg>

@@ -9,7 +9,7 @@ const Checkboxes = () => {
   //array housing all checkboxes so that it's indexed
 
   let allCheckboxes = [];
-  for (let i = 1; i < 100; i++) {
+  for (let i = 1; i < 101; i++) {
     const checkbox = <Checkbox key={i} listId={i} />;
     allCheckboxes.push(checkbox);
   }

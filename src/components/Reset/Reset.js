@@ -11,8 +11,7 @@ const Reset = (props) => {
     event.stopPropagation();
     setCheckpoint('gameReset');
     setCurrentKey(1);
-    const starterMessage = document.querySelector('.startermessage');
-    starterMessage.style.opacity = '100';
+
     const winMessage = document.querySelector('.win-message-container');
     winMessage.style.display = 'none';
   };

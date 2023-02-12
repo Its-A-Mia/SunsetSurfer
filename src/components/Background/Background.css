@@ -2,9 +2,11 @@
   display: flex;
   z-index: -2;
   width: 100%;
+  background: linear-gradient(to bottom, rgba(72, 29, 82, 1) 0%, rgba(173, 58, 95, 1) 70%);
   justify-content: center;
   position: absolute;
   inset: 0 auto auto 0;
+  filter: blur(2px);
 }
 
 .bg-grid-container {
@@ -20,7 +22,7 @@
   height: 110%;
   width: 300%;
   box-shadow: 0 -30px 50px #7a98ed;
-  background-size: 110px 110px;
+  background-size: 80px 80px;
   transition: transform ease-out 100ms;
   background-image: linear-gradient(to right, #556cc9 4px, transparent 1px),
     linear-gradient(to bottom, #556cc9 3px, transparent 1px);
@@ -34,6 +36,7 @@
   content: '';
   width: 300%;
   height: 110%;
+  background-color: black;
   transform: rotateX(64deg) translateX(-50%);
   box-shadow: 0 250px 300px #af4362 inset, 0 750px 350px #bd752c inset;
   animation: sun-ripple 10s ease-in-out infinite alternate;
@@ -45,15 +48,11 @@
   }
 
   20% {
-    box-shadow: 0 350px 300px #af4362 inset, 0 750px 350px #bd752c inset;
+    box-shadow: 0 280px 300px #af4362 inset, 0 630px 350px #bd752c inset;
   }
 
   40% {
     box-shadow: 0 50px 300px #af4362 inset, 0 350px 350px #bd752c inset;
-  }
-
-  60% {
-    box-shadow: 0 250px 300px #af4362 inset, 0 650px 350px #bd752c inset;
   }
 
   80% {
