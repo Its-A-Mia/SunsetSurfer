@@ -6,14 +6,10 @@ const Footer = () => {
     <footer>
       <div className="footerContainer">
         <div className="footer-item-bg">
-          <p>
-            Recreation of
-            <div className="checkboxLink">
-              <a href="https://checkboxrace.com/" target="_blank" rel="noreferrer">
-                Checkbox Race
-              </a>
-            </div>
-          </p>
+          <p>Recreation of</p>
+          <a href="https://checkboxrace.com/" target="_blank" rel="noreferrer">
+            Checkbox Race
+          </a>
         </div>
         <span className="footer-item-bg">
           <h1 id="game-title">Cyber Circuit</h1>

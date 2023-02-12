@@ -37,6 +37,7 @@ const Checkbox = (props) => {
   return (
     <div className="checkbox-container">
       <input
+        onChange={() => {}}
         className="checkbox"
         id={props.listId}
         type="checkbox"

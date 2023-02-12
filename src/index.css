@@ -31,6 +31,7 @@ h1 {
 
 p {
   font-size: 0.825rem;
+  margin: 0;
 }
 
 a {
@@ -75,6 +76,18 @@ a:hover {
     linear-gradient(to bottom, #556cc9 3px, transparent 1px);
   /* animation: move-grid-bg 5s ease-in-out infinite alternate; */
 }
+
+/* ===================
+      Google Icons
+    =================== */
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+/* ===================
+        Animations
+    =================== */
 
 @keyframes move-grid-container {
   0% {
