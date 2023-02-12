@@ -13,6 +13,8 @@ function App() {
   // checkpoints of the game define its sequence--checkpoints run in this sequence:
   // "startScreen", "gameStart", "gameInProgress", "gameFinish", "finishScreen", "gameReset"
 
+  console.log();
+
   //index for which key the checkbox array is on
   const [currentKey, setCurrentKey] = useState(1);
 
@@ -54,8 +56,7 @@ function App() {
   //Called through onClick of checkbox component; stops event bubbling using event.stopPropagation()
   const startGame = () => {
     //Removes starterMessage and shows count/timer in order to get the game started!
-    const starterMessage = document.querySelector('.startermessage');
-    starterMessage.style.opacity = '0';
+
     const timerAndCounter = document.querySelector('.timerAndCounter');
     timerAndCounter.style.display = 'flex';
   };
@@ -79,7 +80,6 @@ function App() {
         </button>
         <SidebarLeft />
         <Footer />
-        <StarterMessage />
         <Checkboxes />
         <Reset />
         <Background />
