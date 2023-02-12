@@ -25,8 +25,10 @@ body {
 h1 {
   margin: 0;
   padding: 0 10px;
-  font-family: 'Permanent Marker', cursive;
+  /* font-family: 'Alegreya Sans SC', sans-serif; */
+  font-family: 'Cinzel', serif;
   font-size: 4.5rem;
+  font-weight: 700;
   font-variant: small-caps;
   letter-spacing: 4px;
 }
@@ -58,32 +60,11 @@ a:hover {
         App Classes
     =================== */
 
-.bg-grid-container {
-  z-index: -1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  perspective: 50em;
-  /* animation: move-grid-container 10s infinite alternate; */
-}
-
-.bg-grid {
-  height: 100%;
-  width: 300%;
-  box-shadow: 0 -10px 50px #7a98ed;
-  background-size: 100px 100px;
-  transform: rotateX(50deg) translateX(-10%);
-  transition: transform ease-out 100ms;
-  background-image: linear-gradient(to right, #556cc9 4px, transparent 1px),
-    linear-gradient(to bottom, #556cc9 3px, transparent 1px);
-  /* animation: move-grid-bg 5s ease-in-out infinite alternate; */
-}
-
 .text-bg {
   padding: 0.2em 1em;
   background-color: black;
   border-radius: 50px;
-  border: solid #556cc9 3px;
+  border: solid #556cc9 4px;
 }
 
 /* ===================

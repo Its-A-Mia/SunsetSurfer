@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { GameContext } from '../../App';
-import ResetWinMessage from '../Reset/ResetWinMessage';
+import Reset from '../Reset/Reset';
 import './WinMessage.css';
 
 const WinMessage = () => {
@@ -41,12 +41,12 @@ const WinMessage = () => {
   }
 
   return (
-    <div className="winMessageContainer">
+    <div className="win-message-container">
       <p className="nice">NICE!</p>
       <p className="timeReadout">
         Your Time was <strong>{totalTime}</strong>
       </p>
-      <ResetWinMessage />
+      <Reset />
     </div>
   );
 };

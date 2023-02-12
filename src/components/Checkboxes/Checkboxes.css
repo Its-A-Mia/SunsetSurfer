@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  padding: 0 0 60px 3860px;
+  padding: 100px 0 60px 3860px;
   transition: transform 100ms ease;
 }
 

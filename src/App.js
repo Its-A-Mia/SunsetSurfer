@@ -1,7 +1,8 @@
 import React, { createContext, useEffect, useState } from 'react';
+import Background from './components/Background/Background.js';
 import Checkboxes from './components/Checkboxes/Checkboxes.js';
 import Footer from './components/Footer/Footer.js';
-import ResetInGame from './components/Reset/ResetInGame.js';
+import Reset from './components/Reset/Reset.js';
 import SidebarLeft from './components/SidebarLeft/SidebarLeft.js';
 import StarterMessage from './components/StarterMessage/StarterMessage.js';
 
@@ -27,14 +28,14 @@ function App() {
 
     checkboxWrapper.style.transform = `translateX(${-40 * (currentKey - 1)}px)`; //moves checkboxes to the left when one is pressed
 
-    let gridXOffset = 390; //in px
+    let gridXOffset = 700; //in px
     const x = window.matchMedia('(max-width: 410px)');
     if (x.matches) {
       gridXOffset = 80;
       gridBackground.style.width = `${4500}%`; //moves checkboxes to the left when one is pressed
     }
 
-    gridBackground.style.transform = `rotateX(50deg) translateX(${-gridXOffset - 20 * (currentKey - 1)}px)`; //moves checkboxes to the left when one is pressed
+    gridBackground.style.transform = `rotateX(64deg) translateX(${-gridXOffset - 5 * (currentKey - 1)}px)`; //moves checkboxes to the left when one is pressed
 
     if (currentKey === 101 || checkpoint === 'gameReset') {
       //Enters this block once game is over--many components contain this check to ensure the end of game locks out player and shows final screen
@@ -42,7 +43,7 @@ function App() {
         setCheckpoint('gameFinish');
       }
       if (currentKey === 101) {
-        const winMessage = document.querySelector('.winMessageContainer');
+        const winMessage = document.querySelector('.win-message-container');
         winMessage.style.display = 'block';
       }
       const timerAndCounter = document.querySelector('.timerAndCounter');
@@ -80,10 +81,8 @@ function App() {
         <Footer />
         <StarterMessage />
         <Checkboxes />
-        <ResetInGame />
-        <div className="bg-grid-container">
-          <div className="bg-grid" />
-        </div>
+        <Reset />
+        <Background />
       </GameContext.Provider>
     </div>
   );

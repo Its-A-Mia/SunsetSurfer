@@ -1,16 +1,18 @@
-.winMessageContainer {
-    display: none;
-    position: absolute;
-    height: 125px;
-    width: 200px;
-    transform: translate(110px);
-    background: #EEEEEE;
-    text-align: center;
-    font-size: small;
-    font-family: 'Courier New', Courier, monospace;
+.win-message-container {
+  display: none;
+  position: absolute;
+  align-items: center;
+  border: solid #556cc9 4px;
+  border-radius: 10px;
+  padding: 1em 0;
+  width: 200px;
+  background: black;
+  text-align: center;
+  font-size: small;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .nice {
-    font-size: large;
-    font-weight: bold;  
+  font-size: large;
+  font-weight: bold;
 }

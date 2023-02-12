@@ -30,18 +30,3 @@
   font-weight: bolder;
   font-size: x-small;
 }
-
-.twitterAnchor {
-  grid-row-start: 3;
-  align-self: end;
-}
-
-.twitterIcon {
-  background: #ededed;
-  border-radius: 50%;
-  height: 30px;
-  grid-row-start: 3;
-  align-self: end;
-  margin: 15px;
-  cursor: pointer;
-}
