@@ -1,9 +1,10 @@
 import React, { createContext, useEffect, useState } from 'react';
 import Background from './components/Background/Background.js';
 import Checkboxes from './components/Checkboxes/Checkboxes.js';
+import Counter from './components/Counter/Counter.js';
 import Footer from './components/Footer/Footer.js';
 import Reset from './components/Reset/Reset.js';
-import SidebarLeft from './components/SidebarLeft/SidebarLeft.js';
+import Timer from './components/Timer/Timer.js';
 
 // many props are passed down, context is best fit
 export const GameContext = createContext();
@@ -32,7 +33,7 @@ function App() {
     const checkboxWrapper = document.querySelector('.checkboxes');
     const gridBackground = document.querySelector('.bg-grid');
 
-    checkboxWrapper.style.transform = `perspective(50em) translateX(${-40 * (currentKey - 1)}px)`; //moves checkboxes to the left when one is pressed
+    checkboxWrapper.style.transform = `translateX(${-40 * (currentKey - 1)}px)`; //moves checkboxes to the left when one is pressed
 
     let gridXOffset = 1400; //in px
     const x = window.matchMedia('(max-width: 410px)');
@@ -82,10 +83,13 @@ function App() {
         <button onClick={(e) => endGame(e)} style={{ position: 'fixed', inset: '0 auto auto 0', zIndex: '2' }}>
           end game
         </button>
-        <SidebarLeft />
         <Footer />
         <Checkboxes />
-        <Reset />
+        <Reset specialClass="mainReset" />
+        <p className="timerAndCounter">
+          <Counter />
+          {checkpoint !== 'startScreen' && <Timer />}
+        </p>
         <Background />
       </GameContext.Provider>
     </div>

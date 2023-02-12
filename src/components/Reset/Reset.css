@@ -1,5 +1,6 @@
 .reset {
   margin: 0 auto;
+  position: relative;
   display: flex;
   align-items: center;
   border-radius: 50px;
@@ -9,9 +10,15 @@
   /* padding: 0 2.5rem 0 2.5rem; */
   cursor: pointer;
   z-index: 1;
+  transform: perspective(50em) rotateX(45deg);
   transition: transform 800ms;
 }
 
+.mainReset {
+  opacity: 0;
+  cursor: default;
+}
+
 .reset:hover {
-  transform: rotate(-360deg);
+  transform: perspective(50em) rotateX(45deg) rotate(-360deg);
 }
