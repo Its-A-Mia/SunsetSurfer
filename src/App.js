@@ -20,7 +20,12 @@ function App() {
   //allows us to control when certain functions are called
   const [checkpoint, setCheckpoint] = useState('startScreen');
 
-  const checkpointManager = (calledFrom) => {};
+  // const checkpointManager = (nextCheckpoint, calledFrom) => {
+  //   (nextCheckpoint, calledFrom) => {
+  //     console.log('current checkpoint', checkpoint);
+  //     console.log('next checkpoint', nextCheckpoint, 'called from', calledFrom);
+  //   };
+  // };
 
   //Updates movement after page is re-rendered to ensure the currentKey state is updated before-hand
   useEffect(() => {
@@ -50,7 +55,7 @@ function App() {
       const timerAndCounter = document.querySelector('.timerAndCounter');
       timerAndCounter.style.display = 'none';
     }
-  }, [currentKey, checkpoint]);
+  }, [currentKey, setCheckpoint, checkpoint]);
 
   //Called through onClick of checkbox component; stops event bubbling using event.stopPropagation()
   const startGame = () => {
@@ -74,9 +79,9 @@ function App() {
   return (
     <div className="App" onClick={onClickApp}>
       <GameContext.Provider value={{ currentKey, setCurrentKey, checkpoint, setCheckpoint, startGame }}>
-        {/* <button onClick={(e) => endGame(e)} style={{ position: 'fixed', inset: '0 auto auto 0', zIndex: '2' }}>
+        <button onClick={(e) => endGame(e)} style={{ position: 'fixed', inset: '0 auto auto 0', zIndex: '2' }}>
           end game
-        </button> */}
+        </button>
         <SidebarLeft />
         <Footer />
         <Checkboxes />
