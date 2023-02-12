@@ -54,7 +54,7 @@ function App() {
   const startGame = () => {
     //Removes starterMessage and shows count/timer in order to get the game started!
     const starterMessage = document.querySelector('.startermessage');
-    starterMessage.style.display = 'none';
+    starterMessage.style.opacity = '0';
     const timerAndCounter = document.querySelector('.timerAndCounter');
     timerAndCounter.style.display = 'flex';
   };

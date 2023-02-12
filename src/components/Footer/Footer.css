@@ -43,13 +43,6 @@ footer {
   animation: textRipple 3s ease-in-out infinite alternate;
 }
 
-.footer-item-bg {
-  padding: 0.2em 1em;
-  background-color: black;
-  border-radius: 50px;
-  border: solid #556cc9 3px;
-}
-
 @media (max-width: 1000px) {
   .footerContainer {
     margin: auto 20px;

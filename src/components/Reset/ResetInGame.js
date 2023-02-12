@@ -12,7 +12,7 @@ const ResetInGame = (props) => {
     setCheckpoint('gameReset');
     setCurrentKey(1);
     const starterMessage = document.querySelector('.startermessage');
-    starterMessage.style.display = 'block';
+    starterMessage.style.opacity = '100';
     const winMessage = document.querySelector('.winMessageContainer');
     winMessage.style.display = 'none';
   };

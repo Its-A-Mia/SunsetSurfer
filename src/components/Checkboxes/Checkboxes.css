@@ -1,9 +1,6 @@
 .container {
   display: flex;
-  height: 600px;
-  align-items: center;
-  padding-right: calc(65vw);
-  padding-left: 47%;
+  padding-left: 3860px;
   transition: transform 100ms ease;
 }
 

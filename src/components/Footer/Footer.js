@@ -5,13 +5,13 @@ const Footer = () => {
   return (
     <footer>
       <div className="footerContainer">
-        <div className="footer-item-bg">
+        <div className="text-bg">
           <p>Recreation of</p>
           <a href="https://checkboxrace.com/" target="_blank" rel="noreferrer">
             Checkbox Race
           </a>
         </div>
-        <span className="footer-item-bg">
+        <span className="text-bg">
           <h1 id="game-title">Cyber Circuit</h1>
         </span>
         <div>

@@ -1,27 +1,16 @@
 .startermessage {
-  position: absolute;
-  max-width: 150px;
-  text-align: center;
   font-weight: 700;
-  font-family: cursive;
-  left: 47%;
-  transform: translateY(-55px);
+  font-family: 'Permanent Marker', cursive;
 }
 
 @media (max-width: 1000px) {
   .startermessage {
-    left: 44%;
+    left: 45%;
   }
 }
 
 @media (max-width: 400px) {
   .startermessage {
-    left: 32%;
+    left: 33%;
   }
-}
-
-.arrow {
-  height: 15px;
-  width: 13px;
-  padding-top: 2px;
 }

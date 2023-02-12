@@ -1,8 +1,10 @@
 .App {
   display: flex;
-  height: 100vh;
+  flex-direction: column;
   align-items: center;
-  /* overflow: hidden; */
+  justify-content: center;
+  height: 100vh;
+  /* align-items: center; */
 }
 
 * {
@@ -75,6 +77,13 @@ a:hover {
   background-image: linear-gradient(to right, #556cc9 4px, transparent 1px),
     linear-gradient(to bottom, #556cc9 3px, transparent 1px);
   /* animation: move-grid-bg 5s ease-in-out infinite alternate; */
+}
+
+.text-bg {
+  padding: 0.2em 1em;
+  background-color: black;
+  border-radius: 50px;
+  border: solid #556cc9 3px;
 }
 
 /* ===================
