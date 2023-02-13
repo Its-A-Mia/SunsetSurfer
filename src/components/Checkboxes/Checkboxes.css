@@ -4,9 +4,9 @@
   transition: transform 100ms ease;
 }
 
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
   .container {
-    padding-left: 44%;
+    padding: 100px 0 60px 3900px;
   }
 }
 
@@ -14,7 +14,7 @@
   .container {
     padding-left: 32%;
   }
-}
+} */
 
 .checkboxes {
   display: flex;

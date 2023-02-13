@@ -1,10 +1,8 @@
 import React, { createContext, useEffect, useState } from 'react';
 import Background from './components/Background/Background.js';
 import Checkboxes from './components/Checkboxes/Checkboxes.js';
-import Counter from './components/Counter/Counter.js';
 import Footer from './components/Footer/Footer.js';
-import Reset from './components/Reset/Reset.js';
-import Timer from './components/Timer/Timer.js';
+import ScoreBar from './components/ScoreBar/ScoreBar.js';
 
 // many props are passed down, context is best fit
 export const GameContext = createContext();
@@ -52,9 +50,12 @@ function App() {
       if (currentKey === 101) {
         const winMessage = document.querySelector('.win-message-container');
         winMessage.style.display = 'block';
+
+        const reset = document.querySelector('.mainReset');
+        reset.style.opacity = '0';
       }
-      const timerAndCounter = document.querySelector('.timerAndCounter');
-      timerAndCounter.style.display = 'none';
+      const scoreBarContainer = document.querySelector('.score-bar-container');
+      scoreBarContainer.style.opacity = '0';
     }
   }, [currentKey, setCheckpoint, checkpoint]);
 
@@ -62,8 +63,11 @@ function App() {
   const startGame = () => {
     //Removes starterMessage and shows count/timer in order to get the game started!
 
-    const timerAndCounter = document.querySelector('.timerAndCounter');
-    timerAndCounter.style.display = 'flex';
+    const reset = document.querySelector('.mainReset');
+    reset.style.opacity = '100';
+
+    const scoreBarContainer = document.querySelector('.score-bar-container');
+    scoreBarContainer.style.opacity = '100';
   };
 
   //Called through the App div to reset back one checkbox
@@ -85,11 +89,7 @@ function App() {
         </button>
         <Footer />
         <Checkboxes />
-        <Reset specialClass="mainReset" />
-        <p className="timerAndCounter">
-          <Counter />
-          {checkpoint !== 'startScreen' && <Timer />}
-        </p>
+        <ScoreBar />
         <Background />
       </GameContext.Provider>
     </div>

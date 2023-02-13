@@ -18,7 +18,7 @@ const Counter = () => {
     setCounter(() => counterLogic());
   }, [currentKey]);
 
-  return <span className="counter">{counter}</span>;
+  return <h3 className="counter">{counter}</h3>;
 };
 
 export default Counter;

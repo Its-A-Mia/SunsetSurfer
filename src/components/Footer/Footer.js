@@ -32,12 +32,7 @@ const Footer = () => {
             </svg>
           </a>
 
-          <a
-            className="footerSVG linkedin-icon"
-            href="https://www.linkedin.com/in/mia-purdun/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a className="footerSVG" href="https://www.linkedin.com/in/mia-purdun/" target="_blank" rel="noreferrer">
             <svg
               className="linkedin-icon"
               xmlns="http://www.w3.org/2000/svg"

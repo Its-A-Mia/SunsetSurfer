@@ -18,10 +18,10 @@ const Reset = (props) => {
 
   return (
     <button className={`reset${props.specialClass ? ' ' + props.specialClass : ''}`} onClick={(e) => resetGame(e)}>
-      <svg width="50px" height="50px" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+      <svg width="30px" height="30px" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
         <g
+          className="reset-button-path"
           fill="none"
-          stroke="#ffffff"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"

@@ -43,7 +43,7 @@ const Timer = () => {
     return `${minutes}:${seconds}:${milliseconds}`;
   }
 
-  return <span className="timer">{timer}</span>;
+  return <h3 className="timer">{timer}</h3>;
 };
 
 export default Timer;
