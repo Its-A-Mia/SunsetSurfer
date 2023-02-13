@@ -50,24 +50,13 @@ function App() {
       if (currentKey === 101) {
         const winMessage = document.querySelector('.win-message-container');
         winMessage.style.display = 'block';
-
-        const reset = document.querySelector('.mainReset');
-        reset.style.opacity = '0';
       }
-      const scoreBarContainer = document.querySelector('.score-bar-container');
-      scoreBarContainer.style.opacity = '0';
     }
   }, [currentKey, setCheckpoint, checkpoint]);
 
   //Called through onClick of checkbox component; stops event bubbling using event.stopPropagation()
   const startGame = () => {
     //Removes starterMessage and shows count/timer in order to get the game started!
-
-    const reset = document.querySelector('.mainReset');
-    reset.style.opacity = '100';
-
-    const scoreBarContainer = document.querySelector('.score-bar-container');
-    scoreBarContainer.style.opacity = '100';
   };
 
   //Called through the App div to reset back one checkbox

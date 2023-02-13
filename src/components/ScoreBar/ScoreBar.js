@@ -11,11 +11,7 @@ const ScoreBar = () => {
         <div className="score-bar-items">
           <Counter />
           <Timer />
-        </div>
-        <div className="score-bar-car-hud">
-          <span className="reset-button-car-hud">
-            <Reset specialClass="mainReset" />
-          </span>
+          <Reset specialClass="mainReset" />
         </div>
       </div>
     </>

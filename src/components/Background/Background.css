@@ -26,7 +26,6 @@
   transition: transform ease-out 100ms;
   background-image: linear-gradient(to right, #556cc987 4px, transparent 1px),
     linear-gradient(to bottom, #556cc9 3px, transparent 1px);
-  /* animation: move-grid-bg 5s ease-in-out infinite alternate; */
 }
 
 .bg-gradient-grid {

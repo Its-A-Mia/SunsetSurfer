@@ -1,20 +1,8 @@
 .container {
   display: flex;
-  padding: 100px 0 60px 3900px;
+  padding: 160px 0 120px 3900px;
   transition: transform 100ms ease;
 }
-
-/* @media (max-width: 1000px) {
-  .container {
-    padding: 100px 0 60px 3900px;
-  }
-}
-
-@media (max-width: 400px) {
-  .container {
-    padding-left: 32%;
-  }
-} */
 
 .checkboxes {
   display: flex;

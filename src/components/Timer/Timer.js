@@ -5,7 +5,7 @@ import './Timer.css';
 const Timer = () => {
   const { checkpoint, setCheckpoint } = useContext(GameContext);
 
-  const [timer, setTimer] = useState(null);
+  const [timer, setTimer] = useState('00:00:00');
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -28,6 +28,7 @@ const Timer = () => {
 
     return () => {
       clearInterval(tick);
+      setTimer('00:00:00');
     };
   }, [isActive, checkpoint, setCheckpoint]);
 
