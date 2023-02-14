@@ -1,17 +1,20 @@
 .instructions-container {
   position: absolute;
-  max-width: 300px;
-  z-index: 1;
+  z-index: 2;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 10px;
-  padding: 0.6em 1em;
-  background: black;
-  border: solid #556cc9 4px;
 }
 
-.instruction-body {
+.instructions {
+  max-width: 300px;
+  background: black;
+  border: solid #556cc9 4px;
+  border-radius: 10px;
+  padding: 0.6em 1em;
+}
+
+.instructions-body {
   font-size: 1rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -29,6 +32,14 @@
 
 .lets-play:hover {
   background-color: #7a98ed;
+}
+
+.instructions-bg {
+  position: absolute;
+  z-index: 1;
+  inset: 0 0 0 0;
+  opacity: 30%;
+  background: black;
 }
 
 @media (max-width: 1000px) {
