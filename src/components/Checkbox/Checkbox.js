@@ -47,7 +47,11 @@ const Checkbox = (props) => {
         checked={props.checkboxIndex < currentKey || currentKey === 101}
         onClick={props.checkboxIndex === currentKey ? (e) => onClickCheckbox(e) : undefined}
       ></input>
-      <span className={props.checkboxIndex === currentKey ? 'pulse' : ''}></span>
+      <span
+        className={
+          props.checkboxIndex === currentKey ? 'pulse-blue' : props.checkboxIndex < currentKey ? 'pulse-pink' : ''
+        }
+      ></span>
     </div>
   );
 };

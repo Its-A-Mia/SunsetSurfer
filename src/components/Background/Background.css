@@ -22,7 +22,8 @@
   display: flex;
   box-shadow: 0 -60px 300px #7a98ed;
   gap: 10px;
-  background: linear-gradient(180deg, rgba(122, 152, 237, 1) 0%, rgb(51, 67, 131) 64%);
+  /* background: linear-gradient(180deg, rgba(122, 152, 237, 1) 0%, rgb(51, 67, 131) 64%); */
+  background: #7a98ed;
   transform: translateY(-60em) rotateX(80deg);
 }
 
@@ -35,6 +36,8 @@
 
 .tile {
   background-color: #000000;
+  opacity: 90%;
+  box-shadow: inset 0 0 35px #7a98ed;
   height: 160px;
   width: 100%;
   transform: translateY(0);
