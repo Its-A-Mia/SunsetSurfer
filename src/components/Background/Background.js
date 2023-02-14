@@ -1,13 +1,71 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Background.css';
 
 const Background = () => {
+  const createColumns = () => {
+    let columns = [];
+    for (let columnKey = 1; columnKey < 41; columnKey++) {
+      columns.push(
+        <div className={`col col-${columnKey}`} key={columnKey}>
+          <div className="tile"></div>
+          <div className="tile"></div>
+          <div className="tile"></div>
+          <div className="tile"></div>
+          <div className="tile"></div>
+          <div className="tile"></div>
+          <div className="tile"></div>
+          <div className="tile"></div>
+          <div className="tile"></div>
+          <div className="tile"></div>
+          <div className="tile"></div>
+          <div className="tile"></div>
+          <div className="tile"></div>
+          <div className="tile"></div>
+          <div className="tile"></div>
+          <div className="tile"></div>
+          <div className="tile"></div>
+          <div className="tile"></div>
+          <div className="tile"></div>
+        </div>
+      );
+    }
+
+    return columns;
+  };
+
+  let columns = createColumns();
+
+  useEffect(() => {
+    const getColumnClasses = () => {
+      let columnClasses = [];
+      for (let columnKey = 1; columnKey < 41; columnKey++) {
+        columnClasses.push(document.querySelector(`.col-${columnKey}`));
+      }
+      return columnClasses;
+    };
+
+    let columnClasses = getColumnClasses();
+
+    let delay = 0;
+    for (let columnKey = 0; columnKey < columnClasses.length; columnKey++) {
+      columnClasses[columnKey].style.animation = `wave 3s ${delay}ms infinite`;
+      delay += 200;
+    }
+    console.log(columnClasses);
+
+    return () => {};
+  }, [columns]);
+
   return (
     <>
-      <div className="bg-grid-container">
+      <div className="grid-container">
+        <div className="grid">{columns}</div>
+      </div>
+
+      {/* <div className="bg-grid-container">
         <div className="bg-gradient-grid"></div>
         <div className="bg-grid" />
-      </div>
+      </div> */}
       <div className="sun-container">
         <div class="sun"></div>
         <div class="overlay"></div>

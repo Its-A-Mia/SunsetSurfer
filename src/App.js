@@ -29,18 +29,18 @@ function App() {
   //Updates movement after page is re-rendered to ensure the currentKey state is updated before-hand
   useEffect(() => {
     const checkboxWrapper = document.querySelector('.checkboxes');
-    const gridBackground = document.querySelector('.bg-grid');
+    const gridBackground = document.querySelector('.grid-container');
 
     checkboxWrapper.style.transform = `translateX(${-40 * (currentKey - 1)}px)`; //moves checkboxes to the left when one is pressed
 
-    let gridXOffset = 1400; //in px
-    const x = window.matchMedia('(max-width: 410px)');
-    if (x.matches) {
-      gridXOffset = 80;
-      gridBackground.style.width = `${4500}%`; //moves checkboxes to the left when one is pressed
-    }
+    // let gridXOffset = 1400; //in px
+    // const x = window.matchMedia('(max-width: 410px)');
+    // if (x.matches) {
+    //   gridXOffset = 80;
+    //   gridBackground.style.width = `${4500}%`; //moves checkboxes to the left when one is pressed
+    // }
 
-    gridBackground.style.transform = `rotateX(64deg) translateX(${-gridXOffset - 5 * (currentKey - 1)}px)`; //moves checkboxes to the left when one is pressed
+    // gridBackground.style.transform = ` translateX(${-5 * (currentKey - 1)}px)`; //moves checkboxes to the left when one is pressed
 
     if (currentKey === 101 || checkpoint === 'gameReset') {
       //Enters this block once game is over--many components contain this check to ensure the end of game locks out player and shows final screen
