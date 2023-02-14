@@ -1,3 +1,7 @@
+.checkbox-container {
+  position: relative;
+}
+
 input[type='checkbox'] {
   appearance: none;
   background-color: #fff;

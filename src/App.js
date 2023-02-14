@@ -3,6 +3,7 @@ import Background from './components/Background/Background.js';
 import Checkboxes from './components/Checkboxes/Checkboxes.js';
 import Footer from './components/Footer/Footer.js';
 import ScoreBar from './components/ScoreBar/ScoreBar.js';
+import Instructions from './components/StarterMessage/Instructions.js';
 
 // many props are passed down, context is best fit
 export const GameContext = createContext();
@@ -53,6 +54,7 @@ function App() {
   return (
     <div className="App" onClick={onClickApp}>
       <GameContext.Provider value={{ currentKey, setCurrentKey, checkpoint, setCheckpoint, startGame }}>
+        <Instructions />
         <button onClick={(e) => endGame(e)} style={{ position: 'fixed', inset: '0 auto auto 0', zIndex: '2' }}>
           end game
         </button>

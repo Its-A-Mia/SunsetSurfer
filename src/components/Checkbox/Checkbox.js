@@ -1,10 +1,11 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Checkbox.css';
 import '../Checkboxes/Checkboxes.js';
 import { GameContext } from '../../App';
 
 const Checkbox = (props) => {
   const { currentKey, setCurrentKey, checkpoint, setCheckpoint, startGame } = useContext(GameContext);
+  const [isPulseAnimationActive, setIsPulseAnimationActive] = useState('false');
 
   function getRandomInteger(max, min) {
     return Math.random() * (max - min + 1) + min;
@@ -16,6 +17,7 @@ const Checkbox = (props) => {
       setCheckpoint('gameStart'); //sets checkpoint to 1 allowing timer logic to run (next changecheckpoint() call in Timer.js)
       startGame();
     }
+
     setCurrentKey(currentKey + 1);
   }
 
@@ -44,7 +46,6 @@ const Checkbox = (props) => {
         checked={props.listId < currentKey || currentKey === 101}
         onClick={props.listId === currentKey ? (e) => onClickCheckbox(e) : undefined}
       />
-      <span className="checkmark"></span>
     </div>
   );
 };
