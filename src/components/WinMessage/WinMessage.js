@@ -15,15 +15,26 @@ const WinMessage = () => {
       setEndTime(null);
       setTotalTime(null);
     }
+
     if (checkpoint === 'gameStart') {
       setStartTime(Date.now()); //captures the intitial time
     }
+
     if (checkpoint === 'gameFinish') {
-      setCheckpoint('finishScreen'); //sets checkpoint to 4 to allow WinMessage component to execute final math after endTime updates
+      setCheckpoint('finishScreen');
       setEndTime(Date.now()); //captures final time
     }
+
     if (checkpoint === 'finishScreen' && !totalTime) {
+      setCheckpoint('displayBestTime');
       setTotalTime(timeLogic(endTime - startTime));
+    }
+
+    if (!!window.localStorage.getItem('best-time')) {
+      const bestTime = window.localStorage?.getItem('best-time');
+      if (!!totalTime && totalTime < bestTime) window.localStorage.setItem('best-time', totalTime);
+    } else {
+      window.window.localStorage.setItem('best-time', totalTime);
     }
   }, [startTime, endTime, totalTime, checkpoint, setCheckpoint]);
 

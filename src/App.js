@@ -10,7 +10,7 @@ export const GameContext = createContext();
 
 function App() {
   // checkpoints of the game define its sequence--checkpoints run in this sequence:
-  // "startScreen", "gameStart", "gameInProgress", "gameFinish", "finishScreen", "gameReset"
+  // "startScreen", "gameStart", "gameInProgress", "gameFinish", "finishScreen", "captureBestTime", "gameReset"
 
   //index for which key the checkbox array is on
   const [currentKey, setCurrentKey] = useState(1);
