@@ -48,10 +48,9 @@ const Background = () => {
 
     let delay = 0;
     for (let columnKey = 0; columnKey < columnClasses.length; columnKey++) {
-      columnClasses[columnKey].style.animation = `wave 3s ${delay}ms infinite`;
+      columnClasses[columnKey].style.animation = `wave 3s ${delay}ms ease-in-out infinite`;
       delay += 200;
     }
-    console.log(columnClasses);
 
     return () => {};
   }, [columns]);

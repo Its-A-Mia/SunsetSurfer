@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
 
         <span className="text-bg">
-          <h1 id="game-title">Cyber Circuit</h1>
+          <h1 id="game-title">Sunset Surfer</h1>
           <span className="text-bg-center-perspective"></span>
         </span>
 

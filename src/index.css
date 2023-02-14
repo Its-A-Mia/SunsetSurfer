@@ -26,8 +26,8 @@ body {
 h1 {
   margin: 0;
   padding: 0 10px;
-  /* font-family: 'Alegreya Sans SC', sans-serif; */
-  font-family: 'Cinzel', serif;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  /* font-family: 'Cinzel', serif; */
   font-size: 4.5rem;
   font-weight: 700;
   font-variant: small-caps;

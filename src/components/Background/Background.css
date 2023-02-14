@@ -23,7 +23,6 @@
   box-shadow: 0 -60px 300px #7a98ed;
   gap: 10px;
   background: linear-gradient(180deg, rgba(122, 152, 237, 1) 0%, rgb(51, 67, 131) 64%);
-  /* background: #7a98ed; */
   transform: translateY(-60em) rotateX(80deg);
 }
 
@@ -39,7 +38,6 @@
   height: 160px;
   width: 100%;
   transform: translateY(0);
-  transition: transform 200ms ease-in-out;
 }
 
 @keyframes wave {
