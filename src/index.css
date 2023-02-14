@@ -72,6 +72,7 @@ a:hover {
   position: relative;
   padding: 0.6em 1em;
   background-color: black;
+  box-shadow: 0 50px 100px black;
   border-radius: 3.125em;
   border: solid #556cc9 4px;
 }
@@ -88,11 +89,11 @@ a:hover {
   border-radius: 3.125em;
 }
 
-.text-bg-left-perspective {
+.text-bg-left-perspective,
+.text-bg-right-perspective {
   z-index: -1;
   position: absolute;
-  top: 8px;
-  left: 2px;
+  top: 6px;
   width: 99%;
   height: 100%;
   background-color: black;
@@ -100,16 +101,12 @@ a:hover {
   border-radius: 3.125em;
 }
 
+.text-bg-left-perspective {
+  left: 2px;
+}
+
 .text-bg-right-perspective {
-  z-index: -1;
-  position: absolute;
-  top: 8px;
   right: 2px;
-  width: 99%;
-  height: 100%;
-  background-color: black;
-  border: solid #556cc9 4px;
-  border-radius: 3.125em;
 }
 
 /* ===================

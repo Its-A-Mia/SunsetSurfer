@@ -11,8 +11,8 @@ footer {
 .footerContainer {
   display: flex;
   width: 100%;
-  justify-content: center;
   gap: 20px;
+  justify-content: center;
   align-items: center;
   text-align: center;
   margin: auto 70px;
@@ -49,6 +49,8 @@ footer {
     rgba(230, 142, 53, 1) 100%
   );
   background-image: var(--background-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
   background-size: 500%;
   -webkit-text-fill-color: transparent;
   transition: transform 200ms;
@@ -64,13 +66,9 @@ footer {
 @keyframes textRipple {
   0% {
     background-position: left;
-    background-clip: text;
-    -webkit-background-clip: text;
   }
 
   100% {
     background-position: right;
-    background-clip: text;
-    -webkit-background-clip: text;
   }
 }

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { GameContext } from '../../App';
-import './Counter.css';
 
 const Counter = () => {
   // eslint-disable-next-line no-undef

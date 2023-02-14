@@ -9,6 +9,5 @@
   position: relative;
   left: 25px;
   gap: 20px;
-
   transition: transform 100ms ease;
 }

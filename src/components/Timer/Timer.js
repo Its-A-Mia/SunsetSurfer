@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { GameContext } from '../../App';
-import './Timer.css';
 
 const Timer = () => {
   const { checkpoint, setCheckpoint } = useContext(GameContext);
@@ -14,7 +13,7 @@ const Timer = () => {
       setCheckpoint('gameInProgress');
     }
 
-    if (checkpoint === 'gameReset') {
+    if (checkpoint === 'gameReset' || checkpoint === 'finishScreen') {
       setIsActive(false);
     }
 

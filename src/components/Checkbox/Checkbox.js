@@ -38,7 +38,6 @@ const Checkbox = (props) => {
     <div className="checkbox-container">
       <input
         onChange={() => {}}
-        className="checkbox"
         id={props.listId}
         type="checkbox"
         disabled={props.listId > currentKey || currentKey === 101}

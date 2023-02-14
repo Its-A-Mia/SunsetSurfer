@@ -20,8 +20,10 @@
 
 .grid {
   display: flex;
+  box-shadow: 0 -60px 300px #7a98ed;
   gap: 10px;
-  background: #556cc9;
+  background: linear-gradient(180deg, rgba(122, 152, 237, 1) 0%, rgb(51, 67, 131) 64%);
+  /* background: #7a98ed; */
   transform: translateY(-60em) rotateX(80deg);
 }
 
@@ -42,13 +44,13 @@
 
 @keyframes wave {
   0% {
-    transform: rotateX(10deg) translate(10px, -5px);
+    transform: rotateX(12deg) translate(7px, -5px);
   }
   50% {
     transform: translate(0);
   }
   100% {
-    transform: rotateX(10deg) translate(10px, -5px);
+    transform: rotateX(12deg) translate(7px, -5px);
   }
 }
 

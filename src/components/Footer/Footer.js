@@ -12,10 +12,12 @@ const Footer = () => {
           </a>
           <span className="text-bg-left-perspective"></span>
         </div>
+
         <span className="text-bg">
           <h1 id="game-title">Cyber Circuit</h1>
           <span className="text-bg-center-perspective"></span>
         </span>
+
         <div className="text-bg">
           <a
             className="footerSVG"

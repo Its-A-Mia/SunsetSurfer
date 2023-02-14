@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { GameContext } from '../../App';
-import Reset from '../Reset/Reset';
 import './WinMessage.css';
 
 const WinMessage = () => {
@@ -29,11 +28,11 @@ const WinMessage = () => {
   }, [startTime, endTime, totalTime, checkpoint, setCheckpoint]);
 
   function timeLogic(duration) {
-    var milliseconds = parseInt((duration % 1000) / 10)
+    let milliseconds = parseInt((duration % 1000) / 10)
       .toString()
       .padStart(2, '0');
-    var seconds = Math.floor((duration / 1000) % 60);
-    var minutes = Math.floor((duration / (1000 * 60)) % 60);
+    let seconds = Math.floor((duration / 1000) % 60);
+    let minutes = Math.floor((duration / (1000 * 60)) % 60);
     minutes = minutes < 10 ? '0' + minutes : minutes;
     seconds = seconds < 10 ? '0' + seconds : seconds;
 
@@ -42,11 +41,10 @@ const WinMessage = () => {
 
   return (
     <div className="win-message-container">
-      <p className="nice">NICE!</p>
-      <p className="timeReadout">
+      <h3>NICE!</h3>
+      <p>
         Your Time was <strong>{totalTime}</strong>
       </p>
-      <Reset />
     </div>
   );
 };

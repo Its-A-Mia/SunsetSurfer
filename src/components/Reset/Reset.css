@@ -1,10 +1,8 @@
 .reset {
   display: flex;
-  align-items: center;
   border-radius: 50px;
   background: none;
   border: none;
-  padding: 20px 0;
   cursor: pointer;
   transition: transform 800ms;
   filter: drop-shadow(0 0 6px white);
