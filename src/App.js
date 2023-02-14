@@ -76,9 +76,9 @@ function App() {
         <button onClick={(e) => endGame(e)} style={{ position: 'fixed', inset: '0 auto auto 0', zIndex: '2' }}>
           end game
         </button>
-        <Footer />
         <Checkboxes />
         <ScoreBar />
+        <Footer />
         <Background />
       </GameContext.Provider>
     </div>

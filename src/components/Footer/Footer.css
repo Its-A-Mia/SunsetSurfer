@@ -2,7 +2,6 @@ footer {
   display: flex;
   align-items: center;
   color: white;
-  position: fixed;
   height: 200px;
   width: 100%;
   inset: auto auto 0 0;
@@ -16,7 +15,7 @@ footer {
   align-items: center;
   text-align: center;
   margin: auto 70px;
-  transform: perspective(50em) rotateX(45deg) translateY(20px);
+  transform: perspective(50em) rotateX(20deg) translateY(20px);
 }
 
 .footerSVG {
