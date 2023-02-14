@@ -14,30 +14,13 @@ function App() {
   //index for which key the checkbox array is on
   const [currentKey, setCurrentKey] = useState(1);
 
-  console.log(currentKey);
-
   //allows us to control when certain functions are called
   const [checkpoint, setCheckpoint] = useState('startScreen');
 
-  // const checkpointManager = (nextCheckpoint, calledFrom) => {
-  //   (nextCheckpoint, calledFrom) => {
-  //     console.log('current checkpoint', checkpoint);
-  //     console.log('next checkpoint', nextCheckpoint, 'called from', calledFrom);
-  //   };
-  // };
-
-  //Updates movement after page is re-rendered to ensure the currentKey state is updated before-hand
   useEffect(() => {
     const checkboxWrapper = document.querySelector('.checkboxes');
 
     checkboxWrapper.style.transform = `translateX(${-40 * (currentKey - 1)}px)`; //moves checkboxes to the left when one is pressed
-
-    // let gridXOffset = 1400; //in px
-    // const x = window.matchMedia('(max-width: 410px)');
-    // if (x.matches) {
-    //   gridXOffset = 80;
-    //   gridBackground.style.width = `${4500}%`; //moves checkboxes to the left when one is pressed
-    // }
 
     if (currentKey === 101 || checkpoint === 'gameReset') {
       //Enters this block once game is over--many components contain this check to ensure the end of game locks out player and shows final screen
