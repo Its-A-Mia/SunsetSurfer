@@ -6,7 +6,7 @@ const Footer = () => {
     <footer>
       <div className="footerContainer">
         <div className="text-bg">
-          <p>Recreation of</p>
+          <p>Inspired by</p>
           <a href="https://checkboxrace.com/" target="_blank" rel="noreferrer">
             Checkbox Race
           </a>

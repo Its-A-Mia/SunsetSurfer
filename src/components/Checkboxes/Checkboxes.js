@@ -10,7 +10,7 @@ const Checkboxes = () => {
 
   let allCheckboxes = [];
   for (let checkboxKey = 1; checkboxKey < 101; checkboxKey++) {
-    const checkbox = <Checkbox key={checkboxKey} listId={checkboxKey} />;
+    const checkbox = <Checkbox key={checkboxKey} checkboxIndex={checkboxKey} />;
     allCheckboxes.push(checkbox);
   }
 

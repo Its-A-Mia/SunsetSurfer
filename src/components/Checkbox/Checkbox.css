@@ -1,5 +1,6 @@
 .checkbox-container {
   position: relative;
+  transition: transform ease 100ms;
 }
 
 input[type='checkbox'] {
@@ -14,7 +15,6 @@ input[type='checkbox'] {
   border-radius: 50px;
   display: grid;
   place-content: center;
-  transition: transform ease 100ms;
 }
 
 input[type='checkbox']::before {
@@ -34,4 +34,23 @@ input[type='checkbox']:checked::before {
 input[type='checkbox']:disabled {
   background-color: gray;
   opacity: 50%;
+}
+
+.pulse {
+  z-index: -1;
+  position: absolute;
+  inset: 0 0 0 0;
+  border: solid 3px #dd517e;
+  border-radius: 50%;
+  animation: pulse 400ms ease-in infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1.3);
+  }
 }
