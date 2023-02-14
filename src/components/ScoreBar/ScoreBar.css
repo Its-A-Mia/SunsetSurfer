@@ -1,6 +1,7 @@
 .score-bar-container {
-  position: relative;
   perspective: 50em;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .score-bar-items {
