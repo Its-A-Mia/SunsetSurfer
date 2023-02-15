@@ -51,20 +51,12 @@ function App() {
     setComboClicks(0);
   }
 
-  function endGame(event) {
-    event.stopPropagation();
-    setCurrentKey(101);
-  }
-
   return (
     <div className="App" onClick={onClickApp}>
       <GameContext.Provider
         value={{ currentKey, setCurrentKey, checkpoint, setCheckpoint, comboClicks, setComboClicks, startGame }}
       >
         <Instructions />
-        <button onClick={(e) => endGame(e)} style={{ position: 'fixed', inset: '0 auto auto 0', zIndex: '2' }}>
-          end game
-        </button>
         <ComboClicks />
         <Checkboxes />
         <div>
