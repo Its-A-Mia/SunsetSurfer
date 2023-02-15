@@ -62,9 +62,9 @@ const Background = () => {
       </div>
 
       <div className="sun-container">
-        <div class="sun"></div>
-        <div class="overlay"></div>
-        <div class="overlay glitch"></div>
+        <div className="sun"></div>
+        <div className="overlay"></div>
+        <div className="overlay glitch"></div>
       </div>
     </>
   );

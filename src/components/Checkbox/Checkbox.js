@@ -4,8 +4,7 @@ import '../Checkboxes/Checkboxes.js';
 import { GameContext } from '../../App';
 
 const Checkbox = (props) => {
-  const { currentKey, setCurrentKey, checkpoint, setCheckpoint, setComboClicks, comboClicks, startGame } =
-    useContext(GameContext);
+  const { currentKey, setCurrentKey, checkpoint, setCheckpoint, startGame } = useContext(GameContext);
 
   function getRandomInteger(max, min) {
     return Math.random() * (max - min + 1) + min;
@@ -17,7 +16,6 @@ const Checkbox = (props) => {
       setCheckpoint('gameStart'); //sets checkpoint to 1 allowing timer logic to run (next changecheckpoint() call in Timer.js)
       startGame();
     }
-    setComboClicks(comboClicks + 1);
     setCurrentKey(currentKey + 1);
   }
 

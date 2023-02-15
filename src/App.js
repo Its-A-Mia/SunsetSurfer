@@ -1,7 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
 import Background from './components/Background/Background.js';
 import Checkboxes from './components/Checkboxes/Checkboxes.js';
-import ComboClicks from './components/ComboClicks/ComboClicks.js';
 import Footer from './components/Footer/Footer.js';
 import ScoreBar from './components/ScoreBar/ScoreBar.js';
 import Instructions from './components/StarterMessage/Instructions.js';
@@ -20,7 +19,6 @@ function App() {
   const [checkpoint, setCheckpoint] = useState('startScreen');
 
   //shows combo length
-  const [comboClicks, setComboClicks] = useState(0);
 
   useEffect(() => {
     const checkboxWrapper = document.querySelector('.checkboxes');
@@ -48,16 +46,12 @@ function App() {
   function onClickApp() {
     if (currentKey === 1 || currentKey === 101) return;
     setCurrentKey(currentKey - 1);
-    setComboClicks(0);
   }
 
   return (
     <div className="App" onClick={onClickApp}>
-      <GameContext.Provider
-        value={{ currentKey, setCurrentKey, checkpoint, setCheckpoint, comboClicks, setComboClicks, startGame }}
-      >
+      <GameContext.Provider value={{ currentKey, setCurrentKey, checkpoint, setCheckpoint, startGame }}>
         <Instructions />
-        <ComboClicks />
         <Checkboxes />
         <div>
           <ScoreBar />
