@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/SunsetSurfer/static/css/main.3da90a14.css",
+    "main.js": "/SunsetSurfer/static/js/main.75540ac0.js",
+    "index.html": "/SunsetSurfer/index.html",
+    "main.3da90a14.css.map": "/SunsetSurfer/static/css/main.3da90a14.css.map",
+    "main.75540ac0.js.map": "/SunsetSurfer/static/js/main.75540ac0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3da90a14.css",
+    "static/js/main.75540ac0.js"
+  ]
+}
