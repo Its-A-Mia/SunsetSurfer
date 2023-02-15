@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  gap: calc(25% - 30px);
+  gap: calc(25% - 4em);
   height: 100vh;
 }
 
@@ -25,7 +25,6 @@ body {
 
 h1 {
   margin: 0;
-  padding: 0 10px;
   font-family: 'Alegreya Sans SC', sans-serif;
   /* font-family: 'Cinzel', serif; */
   font-size: 4.5rem;
@@ -62,9 +61,27 @@ a:hover {
   color: #cb5e6c;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1020px) {
   h1 {
     font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 535px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  h4 {
+    font-size: 0.75rem;
   }
 }
 

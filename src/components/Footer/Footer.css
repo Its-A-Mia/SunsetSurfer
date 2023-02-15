@@ -63,6 +63,12 @@ footer {
   }
 }
 
+@media (max-width: 760px) {
+  .footer-links {
+    display: none;
+  }
+}
+
 @keyframes textRipple {
   0% {
     background-position: left;

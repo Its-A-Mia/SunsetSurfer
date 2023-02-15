@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import Background from './components/Background/Background.js';
 import Checkboxes from './components/Checkboxes/Checkboxes.js';
+import ComboClicks from './components/ComboClicks/ComboClicks.js';
 import Footer from './components/Footer/Footer.js';
 import ScoreBar from './components/ScoreBar/ScoreBar.js';
 import Instructions from './components/StarterMessage/Instructions.js';
@@ -17,6 +18,9 @@ function App() {
 
   //allows us to control when certain functions are called
   const [checkpoint, setCheckpoint] = useState('startScreen');
+
+  //shows combo length
+  const [comboClicks, setComboClicks] = useState(0);
 
   useEffect(() => {
     const checkboxWrapper = document.querySelector('.checkboxes');
@@ -44,6 +48,7 @@ function App() {
   function onClickApp() {
     if (currentKey === 1 || currentKey === 101) return;
     setCurrentKey(currentKey - 1);
+    setComboClicks(0);
   }
 
   function endGame(event) {
@@ -53,11 +58,14 @@ function App() {
 
   return (
     <div className="App" onClick={onClickApp}>
-      <GameContext.Provider value={{ currentKey, setCurrentKey, checkpoint, setCheckpoint, startGame }}>
+      <GameContext.Provider
+        value={{ currentKey, setCurrentKey, checkpoint, setCheckpoint, comboClicks, setComboClicks, startGame }}
+      >
         <Instructions />
         <button onClick={(e) => endGame(e)} style={{ position: 'fixed', inset: '0 auto auto 0', zIndex: '2' }}>
           end game
         </button>
+        <ComboClicks />
         <Checkboxes />
         <div>
           <ScoreBar />

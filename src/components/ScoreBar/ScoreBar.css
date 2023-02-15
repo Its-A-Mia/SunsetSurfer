@@ -6,6 +6,7 @@
 
 .score-bar-items {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 1.25em 3em;
   background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgb(15, 15, 15) 50%, rgba(0, 0, 0, 1) 100%);
@@ -15,4 +16,10 @@
   border-radius: 10px;
   text-shadow: 0 5px 4px white;
   transform: rotateX(20deg);
+}
+
+@media (max-width: 535px) {
+  .score-bar-items {
+    padding: 1.25em 1em;
+  }
 }

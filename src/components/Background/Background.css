@@ -12,7 +12,7 @@
 .grid-container {
   z-index: -1;
   position: absolute;
-  width: 300%;
+  width: 400em;
   height: 100%;
   perspective: 50em;
   transition: transform 200ms;

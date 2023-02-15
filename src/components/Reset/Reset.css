@@ -12,3 +12,9 @@
 .reset:hover {
   transform: rotate(-360deg);
 }
+
+@media (max-width: 535px) {
+  .reset {
+    transform: scale(0.8);
+  }
+}

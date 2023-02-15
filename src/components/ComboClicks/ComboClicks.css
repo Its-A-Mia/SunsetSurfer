@@ -1,0 +1,27 @@
+.combo-clicks-container {
+  transition: opacity 1000ms;
+}
+
+.combo-clicks-value {
+  transition: color 1s;
+}
+
+.container-pop {
+  animation: container-pop 300ms forwards;
+}
+
+.value-pop {
+  animation: value-pop 1000ms forwards;
+}
+
+@keyframes container-pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1) rotate(3deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

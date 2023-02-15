@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footerContainer">
-        <div className="text-bg">
+        <div className="text-bg footer-links">
           <p>Inspired by</p>
           <a href="https://checkboxrace.com/" target="_blank" rel="noreferrer">
             Checkbox Race
@@ -18,7 +18,7 @@ const Footer = () => {
           <span className="text-bg-center-perspective"></span>
         </span>
 
-        <div className="text-bg">
+        <div className="text-bg footer-links">
           <a
             className="footerSVG"
             href="https://github.com/Its-A-Mia/RecreateCheckboxRace"
