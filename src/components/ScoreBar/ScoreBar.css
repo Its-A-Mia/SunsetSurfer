@@ -1,20 +1,46 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .score-bar-container {
+  -webkit-perspective: 50em;
   perspective: 50em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
 }
 
 .score-bar-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 1.25em 3em;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 1)),
+    color-stop(50%, rgb(15, 15, 15)),
+    to(rgba(0, 0, 0, 1))
+  );
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgb(15, 15, 15) 50%, rgba(0, 0, 0, 1) 100%);
   background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgb(15, 15, 15) 50%, rgba(0, 0, 0, 1) 100%);
   border: solid #481d52 4px;
+  -webkit-box-shadow: inset 0 4px 23px #dd517e, 0 20px #1c0821, 0 80px 80px #000000;
   box-shadow: inset 0 4px 23px #dd517e, 0 20px #1c0821, 0 80px 80px #000000;
   gap: 30px;
   border-radius: 10px;
   text-shadow: 0 5px 4px white;
+  -webkit-transform: rotateX(20deg);
   transform: rotateX(20deg);
 }
 

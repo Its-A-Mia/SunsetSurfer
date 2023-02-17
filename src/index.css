@@ -1,7 +1,23 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .App {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   gap: calc(25% - 4em);
   height: 100vh;
@@ -59,6 +75,8 @@ a {
   font-size: 1rem;
   font-weight: 700;
   text-decoration: none;
+  -webkit-transition: color 200ms;
+  -o-transition: color 200ms;
   transition: color 200ms;
 }
 
@@ -98,6 +116,7 @@ a:hover {
   position: relative;
   padding: 0.6em 1em;
   background-color: black;
+  -webkit-box-shadow: 0 50px 100px black;
   box-shadow: 0 50px 100px black;
   border-radius: 3.125em;
   border: solid #556cc9 4px;
@@ -147,20 +166,46 @@ a:hover {
         Animations
     =================== */
 
-@keyframes move-grid-container {
+@-webkit-keyframes move-grid-container {
   0% {
+    -webkit-transform: translateX(-10%);
     transform: translateX(-10%);
   }
   100% {
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
+  }
+}
+
+@keyframes move-grid-container {
+  0% {
+    -webkit-transform: translateX(-10%);
+    transform: translateX(-10%);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+@-webkit-keyframes move-grid-bg {
+  0% {
+    -webkit-transform: rotateX(50deg) translateX(-10%);
+    transform: rotateX(50deg) translateX(-10%);
+  }
+  100% {
+    -webkit-transform: rotateX(50deg) translateX(-30%);
+    transform: rotateX(50deg) translateX(-30%);
   }
 }
 
 @keyframes move-grid-bg {
   0% {
+    -webkit-transform: rotateX(50deg) translateX(-10%);
     transform: rotateX(50deg) translateX(-10%);
   }
   100% {
+    -webkit-transform: rotateX(50deg) translateX(-30%);
     transform: rotateX(50deg) translateX(-30%);
   }
 }

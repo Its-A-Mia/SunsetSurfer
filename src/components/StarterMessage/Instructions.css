@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .instructions-container {
   position: absolute;
   z-index: 2;
@@ -25,6 +32,8 @@
   border: solid #556cc9 0.25em;
   font-size: 1rem;
   background-color: black;
+  -webkit-transition: background-color 200ms;
+  -o-transition: background-color 200ms;
   transition: background-color 200ms;
 }
 

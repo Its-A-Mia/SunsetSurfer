@@ -1,20 +1,38 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .reset {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-radius: 50px;
   background: none;
   border: none;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 800ms;
+  transition: -webkit-transform 800ms;
+  -o-transition: transform 800ms;
   transition: transform 800ms;
+  transition: transform 800ms, -webkit-transform 800ms;
+  -webkit-filter: drop-shadow(0 0 6px white);
   filter: drop-shadow(0 0 6px white);
   stroke: white;
 }
 
 .reset:hover {
+  -webkit-transform: rotate(-360deg);
+  -ms-transform: rotate(-360deg);
   transform: rotate(-360deg);
 }
 
 @media (max-width: 535px) {
   .reset {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
     transform: scale(0.8);
   }
 }
