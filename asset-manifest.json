@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/SunsetSurfer/static/css/main.0e0ccd89.css",
+    "main.css": "/SunsetSurfer/static/css/main.ba564865.css",
     "main.js": "/SunsetSurfer/static/js/main.75540ac0.js",
     "index.html": "/SunsetSurfer/index.html",
-    "main.0e0ccd89.css.map": "/SunsetSurfer/static/css/main.0e0ccd89.css.map",
+    "main.ba564865.css.map": "/SunsetSurfer/static/css/main.ba564865.css.map",
     "main.75540ac0.js.map": "/SunsetSurfer/static/js/main.75540ac0.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e0ccd89.css",
+    "static/css/main.ba564865.css",
     "static/js/main.75540ac0.js"
   ]
 }
